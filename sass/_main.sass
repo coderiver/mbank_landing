@@ -1,6 +1,88 @@
 .header
-  background: #4F204F
+  padding-bottom: 50px
+  background-color: #4F204F
+  background-image: url('../img/header-base.jpg')
+  background-repeat: no-repeat
+  color: #FFF
+  background-position: 50% 100%
+
+.header__top
+  +clr
+
+.header__top-right
+  float: right
 
 .logo
-  width: 133px
-  height: 160px
+  margin: auto
+  +s(logo)
+  +hide-text
+
+.menu
+  display: inline-block
+  vertical-align: middle
+  font-size: 21px
+  line-height: 1.2
+  color: #fff
+  +bender-l
+  li
+    display: inline-block
+    vertical-align: middle
+  a
+    color: inherit
+    text-decoration: none
+  b
+    +bender-b
+
+.lang
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  padding: 7px 5px
+  color: #FFF
+  font-size: 21px
+  line-height: 1
+  +bender-b
+  text-transform: uppercase
+  text-decoration: none
+  border: 2px solid #fff
+  &:before
+    content: ""
+    position: absolute
+    top: 100%
+    left: 50%
+    +arr(12,6,#fff,b)
+    margin: 2px 0 0 -6px
+
+.header__text
+  h1
+    font-size: 60px
+    line-height: 1
+    +bender-i
+    b
+      +bender-b-i
+
+.capabilities
+  margin-top: 35px
+  +bender
+  font-size: 22px
+  line-height: 1.4
+  li
+    display: table
+    table-layout: fixed
+    width: 100%
+    min-height: 50px
+    margin-top: 20px
+    &:first-child
+      margin-top: 0
+
+.capabilities__icon
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  width: 50px
+
+.capabilities__text
+  display: table-cell
+  vertical-align: middle
+  padding-left: 25px
+

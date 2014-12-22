@@ -1,6 +1,8 @@
 +font("bender", bender)
 +font("bender_bold", bender_bold)
 +font("bender_light", bender_light)
++font("bender_italic", bender_italic)
++font("bender_bold_italic", bender_bold_italic)
 
 =bender
   font-family: "bender", Helvetica, Arial, sans-serif
@@ -11,12 +13,19 @@
 =bender-l
   font-family: "bender_light", Helvetica, Arial, sans-serif
   font-weight: normal
+=bender-i
+  font-family: "bender_italic", Helvetica, Arial, sans-serif
+  font-weight: normal
+=bender-b-i
+  font-family: "bender_bold_italic", Helvetica, Arial, sans-serif
+  font-weight: normal
 
 
-body
+.out
   font-family: Arial, sans-serif
   font-size: 12px
   line-height: 1.4
+  color: #FFF
 
 
 .svg-sprite
@@ -29,3 +38,12 @@ body
   height: 100%
   fill: inherit
   background: inherit
+
+
+@each $s in satellite,money,coins,shield,phone
+  .icon-#{$s}
+    display: inline-block
+    &:before
+      content: ""
+      display: inline-block
+      +s(#{$s})

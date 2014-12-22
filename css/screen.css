@@ -20,21 +20,59 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-@font-face { font-family: "bender"; src: url("fonts/bender.eot"); src: url("fonts/bender.eot?#iefix") format("embedded-opentype"), url("fonts/bender.woff2") format("woff2"), url("fonts/bender.woff") format("woff"), url("fonts/bender.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "bender_bold"; src: url("fonts/bender_bold.eot"); src: url("fonts/bender_bold.eot?#iefix") format("embedded-opentype"), url("fonts/bender_bold.woff2") format("woff2"), url("fonts/bender_bold.woff") format("woff"), url("fonts/bender_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "bender_light"; src: url("fonts/bender_light.eot"); src: url("fonts/bender_light.eot?#iefix") format("embedded-opentype"), url("fonts/bender_light.woff2") format("woff2"), url("fonts/bender_light.woff") format("woff"), url("fonts/bender_light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: "bender"; src: url("../fonts/bender.eot"); src: url("../fonts/bender.eot?#iefix") format("embedded-opentype"), url("../fonts/bender.woff") format("woff"), url("../fonts/bender.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "bender_bold"; src: url("../fonts/bender_bold.eot"); src: url("../fonts/bender_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_bold.woff") format("woff"), url("../fonts/bender_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "bender_light"; src: url("../fonts/bender_light.eot"); src: url("../fonts/bender_light.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_light.woff") format("woff"), url("../fonts/bender_light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "bender_italic"; src: url("../fonts/bender_italic.eot"); src: url("../fonts/bender_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_italic.woff") format("woff"), url("../fonts/bender_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "bender_bold_italic"; src: url("../fonts/bender_bold_italic.eot"); src: url("../fonts/bender_bold_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_bold_italic.woff") format("woff"), url("../fonts/bender_bold_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.out { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #FFF; }
 
 .svg-sprite { display: none !important; }
 .svg-sprite svg { display: none; }
 
 .svg-icon, .icon svg { width: 100%; height: 100%; fill: inherit; background: inherit; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+.icon-satellite { display: inline-block; }
+.icon-satellite:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1451px no-repeat; width: 47px; height: 48px; }
 
-.header { background: #4F204F; }
+.icon-money { display: inline-block; }
+.icon-money:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1240px no-repeat; width: 38px; height: 35px; }
 
-.logo { width: 133px; height: 160px; }
+.icon-coins { display: inline-block; }
+.icon-coins:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -839px no-repeat; width: 47px; height: 47px; }
+
+.icon-shield { display: inline-block; }
+.icon-shield:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1587px no-repeat; width: 30px; height: 36px; }
+
+.icon-phone { display: inline-block; }
+.icon-phone:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1339px no-repeat; width: 26px; height: 44px; }
+
+.l { max-width: 1170px; padding: 0 5px; margin: auto; }
+
+.header { padding-bottom: 50px; background-color: #4F204F; background-image: url("../img/header-base.jpg"); background-repeat: no-repeat; color: #FFF; background-position: 50% 100%; }
+
+.header__top { *zoom: 1; }
+.header__top:after { content: " "; display: table; clear: both; }
+
+.header__top-right { float: right; }
+
+.logo { margin: auto; background: url('../img/icons.png') 0 -1025px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
+
+.menu { display: inline-block; vertical-align: middle; font-size: 21px; line-height: 1.2; color: #fff; font-family: "bender_light", Helvetica, Arial, sans-serif; font-weight: normal; }
+.menu li { display: inline-block; vertical-align: middle; }
+.menu a { color: inherit; text-decoration: none; }
+.menu b { font-family: "bender_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.lang { display: inline-block; vertical-align: middle; position: relative; padding: 7px 5px; color: #FFF; font-size: 21px; line-height: 1; font-family: "bender_bold", Helvetica, Arial, sans-serif; font-weight: normal; text-transform: uppercase; text-decoration: none; border: 2px solid #fff; }
+.lang:before { content: ""; position: absolute; top: 100%; left: 50%; width: 0px; height: 0px; border-style: solid; border-width: 6px 6px 0 6px; border-color: #fff transparent transparent transparent; margin: 2px 0 0 -6px; }
+
+.header__text h1 { font-size: 60px; line-height: 1; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+.header__text h1 b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.capabilities { margin-top: 35px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 22px; line-height: 1.4; }
+.capabilities li { display: table; table-layout: fixed; width: 100%; min-height: 50px; margin-top: 20px; }
+.capabilities li:first-child { margin-top: 0; }
+
+.capabilities__icon { display: table-cell; vertical-align: middle; text-align: center; width: 50px; }
+
+.capabilities__text { display: table-cell; vertical-align: middle; padding-left: 25px; }

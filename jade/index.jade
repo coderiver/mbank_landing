@@ -8,29 +8,63 @@ html
     link(rel="stylesheet" media="all" href="css/screen.css")
     <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   body
-    .svg-sprite
-      include ../img/icons.svg
 
     //begin out
     .out
 
       //begin header
       .header
-        .header__right
-          ul.menu
-            li
-              a(href="#")
-                | для клиентов
-            li
-              a(href="#")
-                | для бизнеса
-          a.lang(href="#")
-            | ru
+        .l
+          .header__top
+            .header__top-right
+              ul.menu
+                li
+                  a(href="#")
+                    | для клиентов
+                li
+                  a(href="#")
+                    b для бизнеса
 
+              a.lang(href="#")
+                | ru
 
-        .logo
-          svg.svg-icon
-            use(xlink:href="#icon-logo")
+          .logo
+            | Best Wallet
+
+          .header__text
+            h1
+              | Электронный кошелек
+              br
+              | денежные переводы
+              br
+              b без комиссии
+            ul.capabilities
+              li
+                .capabilities__icon
+                  i.icon-satellite
+                .capabilities__text
+                  | Оплачивайте сервисы
+              li
+                .capabilities__icon
+                  i.icon-money
+                .capabilities__text
+                  | Отправляйте деньги близким
+              li
+                .capabilities__icon
+                  i.icon-coins
+                .capabilities__text
+                  | Без комиссии
+              li
+                .capabilities__icon
+                  i.icon-shield
+                .capabilities__text
+                  | Безопасно и комфортно
+              li
+                .capabilities__icon
+                  i.icon-phone
+                .capabilities__text
+                  | Бесплатное пополнение
+
       //end header
 
     //end out
