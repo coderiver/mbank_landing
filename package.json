@@ -1,0 +1,28 @@
+{
+  "name": "gulp-template",
+  "version": "1.0.0",
+  "description": "gulp-template by buschidos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "template",
+    "nodejs"
+  ],
+  "author": "buschidos",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.7.0",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-changed": "^1.0.0",
+    "gulp-compass": "^2.0.1",
+    "gulp-jade": "^0.9.0",
+    "gulp-notify": "^2.0.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-svgmin": "^1.0.0",
+    "gulp-svgstore": "^3.0.0"
+  }
+}

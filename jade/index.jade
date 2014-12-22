@@ -1,0 +1,39 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title MBank
+    meta(name="viewport" content="initial-scale=1, user-scalable=no")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet" media="all" href="css/screen.css")
+    <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  body
+    .svg-sprite
+      include ../img/icons.svg
+
+    //begin out
+    .out
+
+      //begin header
+      .header
+        .header__right
+          ul.menu
+            li
+              a(href="#")
+                | для клиентов
+            li
+              a(href="#")
+                | для бизнеса
+          a.lang(href="#")
+            | ru
+
+
+        .logo
+          svg.svg-icon
+            use(xlink:href="#icon-logo")
+      //end header
+
+    //end out
+
+    //load scripts
+    script(src="js/lib/head.js" data-headjs-load="js/init.js")
