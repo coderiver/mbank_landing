@@ -1,19 +1,19 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+    (function(){
+        var radioBtns = $('.figure').find('input[type="radio"]');
+        radioBtns.each(function() {
+            $(this).on('change', function() {
+                console.log($(this));
+                var radio = $(this),
+                    el = $(this).parents('.figure__item');
+                if (radio.is(':checked')) {
+                    el.addClass('is-active');
+                } else {
+                    el.removeClass('is-active');
+                }
+            });
+        });
+    })();
 
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
-
-	console.log($('body').html());
 });

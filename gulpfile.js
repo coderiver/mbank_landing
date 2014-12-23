@@ -67,7 +67,7 @@ gulp.task('svgsprite', function() {
 
 // watch
 gulp.task('watch', function() {
-    gulp.watch('sass/**/*.sass', ['compass']);
+    gulp.watch('sass/**/*', ['compass']);
     gulp.watch('jade/**/*.jade', ['jade']);
     gulp.watch('jade/includes/*.jade', ['jade-all']);
     gulp.watch('jade/layouts/*.jade', ['jade-all']);

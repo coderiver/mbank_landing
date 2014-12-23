@@ -1,12 +1,17 @@
 .header
-  padding-bottom: 50px
-  background-color: #4F204F
-  background-image: url('../img/header-base.jpg')
+  position: relative
+  z-index: 2
+  padding: 46px 0 97px
+  background-image: url('../img/header-bg.png')
   background-repeat: no-repeat
   color: #FFF
   background-position: 50% 100%
+  background-size: cover
+  .l
+    position: relative
 
 .header__top
+  margin-bottom: 119px
   +clr
 
 .header__top-right
@@ -27,6 +32,7 @@
   li
     display: inline-block
     vertical-align: middle
+    margin-right: 20px
   a
     color: inherit
     text-decoration: none
@@ -53,16 +59,8 @@
     +arr(12,6,#fff,b)
     margin: 2px 0 0 -6px
 
-.header__text
-  h1
-    font-size: 60px
-    line-height: 1
-    +bender-i
-    b
-      +bender-b-i
-
 .capabilities
-  margin-top: 35px
+  margin-top: 60px
   +bender
   font-size: 22px
   line-height: 1.4
@@ -71,7 +69,7 @@
     table-layout: fixed
     width: 100%
     min-height: 50px
-    margin-top: 20px
+    margin-top: 19px
     &:first-child
       margin-top: 0
 
@@ -80,9 +78,224 @@
   vertical-align: middle
   text-align: center
   width: 50px
+  .icon
+    vertical-align: middle
 
 .capabilities__text
   display: table-cell
   vertical-align: middle
   padding-left: 25px
 
+.phone
+  position: absolute
+  top: 195px
+  right: percentage(-73/1170)
+  &:before
+    content: ""
+    display: block
+    position: relative
+    width: 578px
+    height: 998px
+    z-index: 2
+    background: url("../img/phone-bg.png") no-repeat
+  &:after
+    content: ""
+    position: absolute
+    z-index: 1
+    width: 1453px
+    height: 1193px
+    top: -242px
+    right: -317px
+    background: url("../img/phone-shadow.png") no-repeat
+    pointer-events: none
+
+.phone__inner
+  position: absolute
+  z-index: 2
+  top: 99px
+  left: 87px
+  width: 390px
+  height: 696px
+  background: black
+  overflow: hidden
+
+
+.intro
+  position: relative
+  z-index: 1
+  margin-top: -130px
+  padding: 297px 0 340px
+  min-height: 484px
+  background: url("../img/intro-bg.jpg") no-repeat 50% 0
+  background-size: cover
+
+.shop
+  position: relative
+  z-index: 2
+  margin: -340px 0 -334px
+  padding: 370px 0 200px
+  min-height: 520px
+  background: url("../img/shop-bg.png") no-repeat 50% 0
+  background-size: cover
+
+.transfers
+  padding: 485px 0 190px
+  min-height: 485px
+  background: url("../img/transfers-bg.jpg") no-repeat 50% 100%
+  background-size: cover
+
+.text
+  width: percentage(695/1170)
+  font-size: 29px
+  line-height: 1.15
+  p
+    margin: 39px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  b, strong
+    +proxima-b
+
+.title-head
+  font-size: 60px
+  line-height: 1.25
+  +bender-i
+  strong, b
+    +bender-b-i
+
+.title
+  +bender-b-i
+  font-size: 50px
+  line-height: 1.1
+
+.commission
+  position: relative
+  padding: 95px 0
+  .text
+    width: auto
+    padding: 0 percentage(100/1170)
+    text-align: center
+
+.figure
+  position: relative
+  width: 1170px
+  height: 500px
+  margin-top: 80px
+
+.figure__text
+  display: block
+  width: percentage(500/1170)
+  font-size: 21px
+  line-height: 1.1
+  +bender-i
+  b, strong
+    +bender-b-i
+
+.figure__center
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: -150px 0 0 -150px
+  +s(best-main)
+
+.figure__left
+  float: left
+  .btn
+    text-align: right
+  .btn__marker
+    top: 50%
+    right: -20px
+    bottom: auto
+    left: auto
+  .line
+    left: 100%
+
+.figure__right
+  float: right
+  .line
+    right: 100%
+
+.figure__item
+  position: absolute
+  .line
+    position: absolute
+
+
+.btn
+  display: inline-block
+  position: relative
+  user-select: none
+  .line
+    position: absolute
+
+.btn__input
+  position: absolute
+  opacity: 0
+
+.btn__marker
+  position: absolute
+  top: 50%
+  left: -20px
+  width: 10px
+  height: 10px
+  background-color: #59EEDE
+  border-radius: 50%
+  margin: -7px 0 0 -7px
+  &:before
+    content: ""
+    position: absolute
+    top: -2px
+    left: -2px
+    right: -2px
+    bottom: -2px
+    border: 1px solid #59EEDE
+    border-radius: 50%
+  .btn__input:checked + &
+    background-color: #F03081
+    &:before
+      border-color: #F03081
+  .from-card &
+    top: 13px
+    right: -6px
+  .to-sberbank &
+    left: -12px
+    bottom: 5px
+    top: auto
+  .to-yandex
+    left: -12px
+  .to-card &
+    top: auto
+    bottom: 16px
+    left: -8px
+
+.btn__inner
+  display: table
+  table-layout: fixed
+  .to-sberbank &
+    display: block
+
+.btn__icon
+  display: table-cell
+  vertical-align: middle
+  font-size: 0
+  .to-sberbank &
+    display: block
+
+.btn__text
+  display: table-cell
+  vertical-align: middle
+  padding: 0 10px
+  font-size: 16px
+  line-height: 1
+  .to-sberbank &
+    display: block
+    padding: 0 0 0 29px
+
+.btn__label
+  display: block
+  +proxima-l
+
+.btn__name
+  display: block
+  +proxima-b

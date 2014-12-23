@@ -1,7 +1,5 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
-body, html { height: 100%; }
-
 img, fieldset, a img { border: none; }
 
 input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; border-radius: 0; }
@@ -25,54 +23,211 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "bender_light"; src: url("../fonts/bender_light.eot"); src: url("../fonts/bender_light.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_light.woff") format("woff"), url("../fonts/bender_light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "bender_italic"; src: url("../fonts/bender_italic.eot"); src: url("../fonts/bender_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_italic.woff") format("woff"), url("../fonts/bender_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "bender_bold_italic"; src: url("../fonts/bender_bold_italic.eot"); src: url("../fonts/bender_bold_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/bender_bold_italic.woff") format("woff"), url("../fonts/bender_bold_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.out { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #FFF; }
+@font-face { font-family: "proxima_nova"; src: url("../fonts/proxima_nova.eot"); src: url("../fonts/proxima_nova.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova.woff") format("woff"), url("../fonts/proxima_nova.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "proxima_nova_bold"; src: url("../fonts/proxima_nova_bold.eot"); src: url("../fonts/proxima_nova_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_bold.woff") format("woff"), url("../fonts/proxima_nova_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "proxima_nova_light"; src: url("../fonts/proxima_nova_light.eot"); src: url("../fonts/proxima_nova_light.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_light.woff") format("woff"), url("../fonts/proxima_nova_light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "proxima_nova", Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #FFF; background-color: #231A43; background-image: linear-gradient(28deg, #221745 0%, #511c51 100%); }
+body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
 .svg-sprite { display: none !important; }
 .svg-sprite svg { display: none; }
 
 .svg-icon, .icon svg { width: 100%; height: 100%; fill: inherit; background: inherit; }
 
-.icon-satellite { display: inline-block; }
-.icon-satellite:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1451px no-repeat; width: 47px; height: 48px; }
+.icon { display: inline-block; }
 
-.icon-money { display: inline-block; }
-.icon-money:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1240px no-repeat; width: 38px; height: 35px; }
+.icon-satellite { background: url('../img/icons.png') 0 -2193px no-repeat; width: 47px; height: 48px; }
 
-.icon-coins { display: inline-block; }
-.icon-coins:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -839px no-repeat; width: 47px; height: 47px; }
+.icon-money { background: url('../img/icons.png') 0 -1982px no-repeat; width: 38px; height: 35px; }
 
-.icon-shield { display: inline-block; }
-.icon-shield:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1587px no-repeat; width: 30px; height: 36px; }
+.icon-coins { background: url('../img/icons.png') 0 -1458px no-repeat; width: 47px; height: 47px; }
 
-.icon-phone { display: inline-block; }
-.icon-phone:before { content: ""; display: inline-block; background: url('../img/icons.png') 0 -1339px no-repeat; width: 26px; height: 44px; }
+.icon-shield { background: url('../img/icons.png') 0 -2329px no-repeat; width: 30px; height: 36px; }
+
+.icon-phone { background: url('../img/icons.png') 0 -2081px no-repeat; width: 26px; height: 44px; }
+
+.icon-best-wallet { background: url('../img/icons.png') 0 -1164px no-repeat; width: 50px; height: 60px; }
+
+.icon-best-wallet { background: url('../img/icons.png') 0 -1164px no-repeat; width: 50px; height: 60px; }
+
+.icon-best { background: url('../img/icons.png') 0 -1320px no-repeat; width: 58px; height: 41px; }
+
+.icon-sberbank { background: url('../img/icons.png') 0 -2251px no-repeat; width: 116px; height: 22px; }
+
+.icon-credit-pilot { background: url('../img/icons.png') 0 -1515px no-repeat; width: 93px; height: 33px; }
+
+.icon-webmoney { background: url('../img/icons.png') 0 -2478px no-repeat; width: 102px; height: 25px; }
+
+.icon-visa-master { background: url('../img/icons.png') 0 -2375px no-repeat; width: 53px; height: 44px; }
+
+.icon-wallet-one { background: url('../img/icons.png') 0 -2429px no-repeat; width: 45px; height: 39px; }
+
+.icon-yandex { background: url('../img/icons.png') 0 -2513px no-repeat; width: 80px; height: 34px; }
+
+.line { display: inline-block; }
+
+.from-best-wallet .line { background: url('../img/lines.png') 0 -182px no-repeat; width: 268px; height: 120px; }
+.from-best-wallet.is-active .line { background: url('../img/lines.png') 0 -52px no-repeat; }
+
+.from-best .line { background: url('../img/lines.png') 0 -312px no-repeat; width: 121px; height: 42px; }
+.from-best.is-active .line { background: url('../img/lines.png') 0 0 no-repeat; }
+
+.from-card .line { background: url('../img/lines.png') 0 -407px no-repeat; width: 47px; height: 33px; }
+.from-card.is-active .line { background: url('../img/lines.png') 0 -364px no-repeat; }
+
+.from-credit-pilot .line { background: url('../img/lines.png') 0 -598px no-repeat; width: 263px; height: 138px; }
+.from-credit-pilot.is-active .line { background: url('../img/lines.png') 0 -450px no-repeat; }
+
+.to-best-wallet .line { background: url('../img/lines.png') 0 -949px no-repeat; width: 165px; height: 112px; }
+.to-best-wallet.is-active .line { background: url('../img/lines.png') 0 -827px no-repeat; }
+
+.to-best .line { background: url('../img/lines.png') 0 -1071px no-repeat; width: 119px; height: 71px; }
+.to-best.is-active .line { background: url('../img/lines.png') 0 -746px no-repeat; }
+
+.to-wallet-one .line { background: url('../img/lines.png') 0 -1520px no-repeat; width: 273px; height: 80px; }
+.to-wallet-one.is-active .line { background: url('../img/lines.png') 0 -1430px no-repeat; }
+
+.to-sberbank .line { background: url('../img/lines.png') 0 -1382px no-repeat; width: 108px; height: 38px; }
+.to-sberbank.is-active .line { background: url('../img/lines.png') 0 -1334px no-repeat; }
+
+.to-yandex .line { background: url('../img/lines.png') 0 -1992px no-repeat; width: 274px; height: 68px; }
+.to-yandex.is-active .line { background: url('../img/lines.png') 0 -1914px no-repeat; }
+
+.to-card .line { background: url('../img/lines.png') 0 -1297px no-repeat; width: 224px; height: 27px; }
+.to-card.is-active .line { background: url('../img/lines.png') 0 -1152px no-repeat; }
+
+.to-card-rf .line { background: url('../img/lines.png') 0 -1243px no-repeat; width: 103px; height: 44px; }
+.to-card-rf.is-active .line { background: url('../img/lines.png') 0 -1189px no-repeat; }
+
+.to-webmoney .line { background: url('../img/lines.png') 0 -1762px no-repeat; width: 172px; height: 142px; }
+.to-webmoney.is-active .line { background: url('../img/lines.png') 0 -1610px no-repeat; }
 
 .l { max-width: 1170px; padding: 0 5px; margin: auto; }
 
-.header { padding-bottom: 50px; background-color: #4F204F; background-image: url("../img/header-base.jpg"); background-repeat: no-repeat; color: #FFF; background-position: 50% 100%; }
+.header { position: relative; z-index: 2; padding: 46px 0 97px; background-image: url("../img/header-bg.png"); background-repeat: no-repeat; color: #FFF; background-position: 50% 100%; background-size: cover; }
+.header .l { position: relative; }
 
-.header__top { *zoom: 1; }
+.header__top { margin-bottom: 119px; *zoom: 1; }
 .header__top:after { content: " "; display: table; clear: both; }
 
 .header__top-right { float: right; }
 
-.logo { margin: auto; background: url('../img/icons.png') 0 -1025px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
+.logo { margin: auto; background: url('../img/icons.png') 0 -1767px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
 
 .menu { display: inline-block; vertical-align: middle; font-size: 21px; line-height: 1.2; color: #fff; font-family: "bender_light", Helvetica, Arial, sans-serif; font-weight: normal; }
-.menu li { display: inline-block; vertical-align: middle; }
+.menu li { display: inline-block; vertical-align: middle; margin-right: 20px; }
 .menu a { color: inherit; text-decoration: none; }
 .menu b { font-family: "bender_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
 .lang { display: inline-block; vertical-align: middle; position: relative; padding: 7px 5px; color: #FFF; font-size: 21px; line-height: 1; font-family: "bender_bold", Helvetica, Arial, sans-serif; font-weight: normal; text-transform: uppercase; text-decoration: none; border: 2px solid #fff; }
 .lang:before { content: ""; position: absolute; top: 100%; left: 50%; width: 0px; height: 0px; border-style: solid; border-width: 6px 6px 0 6px; border-color: #fff transparent transparent transparent; margin: 2px 0 0 -6px; }
 
-.header__text h1 { font-size: 60px; line-height: 1; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
-.header__text h1 b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
-
-.capabilities { margin-top: 35px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 22px; line-height: 1.4; }
-.capabilities li { display: table; table-layout: fixed; width: 100%; min-height: 50px; margin-top: 20px; }
+.capabilities { margin-top: 60px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 22px; line-height: 1.4; }
+.capabilities li { display: table; table-layout: fixed; width: 100%; min-height: 50px; margin-top: 19px; }
 .capabilities li:first-child { margin-top: 0; }
 
 .capabilities__icon { display: table-cell; vertical-align: middle; text-align: center; width: 50px; }
+.capabilities__icon .icon { vertical-align: middle; }
 
 .capabilities__text { display: table-cell; vertical-align: middle; padding-left: 25px; }
+
+.phone { position: absolute; top: 195px; right: -6.23932%; }
+.phone:before { content: ""; display: block; position: relative; width: 578px; height: 998px; z-index: 2; background: url("../img/phone-bg.png") no-repeat; }
+.phone:after { content: ""; position: absolute; z-index: 1; width: 1453px; height: 1193px; top: -242px; right: -317px; background: url("../img/phone-shadow.png") no-repeat; pointer-events: none; }
+
+.phone__inner { position: absolute; z-index: 2; top: 99px; left: 87px; width: 390px; height: 696px; background: black; overflow: hidden; }
+
+.intro { position: relative; z-index: 1; margin-top: -130px; padding: 297px 0 340px; min-height: 484px; background: url("../img/intro-bg.jpg") no-repeat 50% 0; background-size: cover; }
+
+.shop { position: relative; z-index: 2; margin: -340px 0 -334px; padding: 370px 0 200px; min-height: 520px; background: url("../img/shop-bg.png") no-repeat 50% 0; background-size: cover; }
+
+.transfers { padding: 485px 0 190px; min-height: 485px; background: url("../img/transfers-bg.jpg") no-repeat 50% 100%; background-size: cover; }
+
+.text { width: 59.40171%; font-size: 29px; line-height: 1.15; }
+.text p { margin: 39px 0; }
+.text p:first-child { margin-top: 0; }
+.text p:last-child { margin-bottom: 0; }
+.text b, .text strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.title-head { font-size: 60px; line-height: 1.25; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+.title-head strong, .title-head b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.title { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 50px; line-height: 1.1; }
+
+.commission { position: relative; padding: 95px 0; }
+.commission .text { width: auto; padding: 0 8.54701%; text-align: center; }
+
+.figure { position: relative; width: 1170px; height: 500px; margin-top: 80px; }
+
+.figure__text { display: block; width: 42.73504%; font-size: 21px; line-height: 1.1; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+.figure__text b, .figure__text strong { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -855px no-repeat; width: 299px; height: 299px; }
+
+.figure__left { float: left; }
+.figure__left .btn { text-align: right; }
+.figure__left .btn__marker { top: 50%; right: -20px; bottom: auto; left: auto; }
+.figure__left .line { left: 100%; }
+
+.figure__right { float: right; }
+.figure__right .line { right: 100%; }
+
+.figure__item { position: absolute; }
+.figure__item .line { position: absolute; }
+
+.btn { display: inline-block; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.btn .line { position: absolute; }
+
+.btn__input { position: absolute; opacity: 0; }
+
+.btn__marker { position: absolute; top: 50%; left: -20px; width: 10px; height: 10px; background-color: #59EEDE; border-radius: 50%; margin: -7px 0 0 -7px; }
+.btn__marker:before { content: ""; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border: 1px solid #59EEDE; border-radius: 50%; }
+.btn__input:checked + .btn__marker { background-color: #F03081; }
+.btn__input:checked + .btn__marker:before { border-color: #F03081; }
+.from-card .btn__marker { top: 13px; right: -6px; }
+.to-sberbank .btn__marker { left: -12px; bottom: 5px; top: auto; }
+.btn__marker .to-yandex { left: -12px; }
+.to-card .btn__marker { top: auto; bottom: 16px; left: -8px; }
+
+.btn__inner { display: table; table-layout: fixed; }
+.to-sberbank .btn__inner { display: block; }
+
+.btn__icon { display: table-cell; vertical-align: middle; font-size: 0; }
+.to-sberbank .btn__icon { display: block; }
+
+.btn__text { display: table-cell; vertical-align: middle; padding: 0 10px; font-size: 16px; line-height: 1; }
+.to-sberbank .btn__text { display: block; padding: 0 0 0 29px; }
+
+.btn__label { display: block; font-family: "proxima_nova_light", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.btn__name { display: block; font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.from-best-wallet { top: 113px; right: 996px; }
+.from-best-wallet .line { top: -37px; margin-left: 20px; }
+
+.from-card { top: 162px; right: 773px; }
+.from-card .line { top: 14px; margin-left: 10px; }
+
+.from-best { top: 248px; right: 859px; }
+.from-best .line { top: -24px; margin-left: 22px; }
+
+.from-credit-pilot { top: 412px; right: 939px; }
+.from-credit-pilot .line { top: -58px; margin-left: 21px; }
+
+.to-best-wallet { top: -9px; left: 823px; }
+.to-best-wallet .line { top: 20px; margin-right: 34px; }
+
+.to-best { top: 61px; left: 821px; }
+.to-best .line { top: 20px; margin-right: 34px; }
+
+.to-wallet-one { top: 78px; left: 1029px; }
+.to-wallet-one .line { top: 32px; margin-right: 32px; }
+
+.to-sberbank { top: 138px; left: 837px; }
+.to-sberbank .line { top: 49px; margin-right: 22px; }
+
+.to-yandex { top: 174px; left: 1009px; }
+.to-yandex .line { top: 20px; margin-right: 25px; }
+
+.to-card { top: 256px; left: 943px; }
+.to-card .line { top: 25px; margin-right: 20px; }

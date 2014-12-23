@@ -3,6 +3,9 @@
 +font("bender_light", bender_light)
 +font("bender_italic", bender_italic)
 +font("bender_bold_italic", bender_bold_italic)
++font("proxima_nova", proxima_nova)
++font("proxima_nova_bold", proxima_nova_bold)
++font("proxima_nova_light", proxima_nova_light)
 
 =bender
   font-family: "bender", Helvetica, Arial, sans-serif
@@ -19,13 +22,25 @@
 =bender-b-i
   font-family: "bender_bold_italic", Helvetica, Arial, sans-serif
   font-weight: normal
+=proxima
+  font-family: "proxima_nova", Helvetica, Arial, sans-serif
+=proxima-b
+  font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif
+  font-weight: normal
+=proxima-l
+  font-family: "proxima_nova_light", Helvetica, Arial, sans-serif
+  font-weight: normal
 
 
-.out
-  font-family: Arial, sans-serif
+body
+  font-family: "proxima_nova", Arial, sans-serif
   font-size: 12px
   line-height: 1.4
   color: #FFF
+  background-color: #231A43
+  background-image: linear-gradient(28deg, #221745 0%, #511C51 100%)
+  b, strong
+    +proxima-b
 
 
 .svg-sprite
@@ -39,11 +54,28 @@
   fill: inherit
   background: inherit
 
+.icon
+  display: inline-block
 
-@each $s in satellite,money,coins,shield,phone
+@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex
   .icon-#{$s}
-    display: inline-block
-    &:before
-      content: ""
-      display: inline-block
-      +s(#{$s})
+    +s(#{$s})
+
+.line
+  display: inline-block
+
+@each $s in best-wallet,best,card,credit-pilot
+  .from-#{$s}
+    .line
+      +s(from-#{$s}, $lines)
+    &.is-active
+      .line
+        +si(from-#{$s}-red, $lines)
+
+@each $s in best-wallet,best,wallet-one,sberbank,yandex,card,card-rf,webmoney
+  .to-#{$s}
+    .line
+      +s(to-#{$s}, $lines)
+    &.is-active
+      .line
+        +si(to-#{$s}-red, $lines)
