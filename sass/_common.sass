@@ -42,6 +42,9 @@ body
   b, strong
     +proxima-b
 
+.out
+  overflow: hidden
+
 
 .svg-sprite
   display: none !important
@@ -57,7 +60,7 @@ body
 .icon
   display: inline-block
 
-@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex
+@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex,best-white,ipsp
   .icon-#{$s}
     +s(#{$s})
 

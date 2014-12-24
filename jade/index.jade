@@ -13,7 +13,7 @@ html
     .out
 
       //begin header
-      .header
+      header.header
         .l
           .header__top
             .header__top-right
@@ -64,14 +64,14 @@ html
                   i.icon.icon-phone
                 .capabilities__text
                   | Бесплатное пополнение
-
-          .phone
-            .phone__inner
-              img(src="../img/screen.jpg", width="390", height="696" alt="")
+          .phone-container
+            .phone.js-phone
+              .phone__inner
+                img(src="../img/screen.jpg", width="390", height="696" alt="")
       //end header
 
       //begin intro
-      .intro
+      section.intro
         .l
           .text
             h2.title
@@ -89,7 +89,7 @@ html
       //end intro
 
       //begin shop
-      .shop
+      section.shop
         .l
           .text
             h2.title
@@ -104,7 +104,7 @@ html
       //end shop
 
       //begin transfers
-      .transfers
+      section.transfers
         .l
           .text
             h2.title
@@ -124,206 +124,253 @@ html
               | Дешево - тарифы начинаются с 0,5%
       //end transfers
 
-      //begin commission
-      .commission
-        .l
-          .text
-            h2.title
-              | Без комиссии
-            p
-              | Все сервисы - без комиссии
-              br
-              | Без сюрпризов - мы берем комиссию только с денежных переводов
-              | и предлагаем прозрачные тарифы
-          //begin figure
-          .figure
-            span.figure__text
+      .bottom-area
+        //begin commission
+        section.commission
+          .l
+            .text
+              h2.title
+                | Без комиссии
+              p
+                | Все сервисы - без комиссии
+                br
+                | Без сюрпризов - мы берем комиссию только с денежных переводов
+                | и предлагаем прозрачные тарифы
+            span.figure-text
               | Выберите <b>откуда</b> и <b>куда</b> вы хотите совершить
               | <b>денежный перевод</b>, чтобы узнать комиссию
-            .figure__center
-            ul.figure__left
-              li.figure__item.from-best-wallet
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="from")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__text
-                      span.btn__label
-                        | кошелек
-                      b.btn__name
-                        | Best Wallet
-                    .btn__icon
-                      i.icon.icon-best-wallet
-              li.figure__item.from-card
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="from")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__text
-                      span.btn__label
-                        | карты
-                      b.btn__name
-                        | Visa
-                      b.btn__name
-                        | MasterCard
-                    .btn__icon
-                      i.icon.icon-visa-master
-              li.figure__item.from-best
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="from")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__text
-                      span.btn__label
-                        | касса
-                      b.btn__name
-                        | партнера
-                        br
-                        | ПС БЭСТ
-                    .btn__icon
-                      i.icon.icon-best
-              li.figure__item.from-credit-pilot
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="from")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__text
-                      span.btn__label
-                        | терминал
-                      b.btn__name
-                        | сети
-                        br
-                        | КредитПилот
-                    .btn__icon
-                      i.icon.icon-credit-pilot
-            ul.figure__right
-              li.figure__item.to-best-wallet
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="to")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__icon
-                      i.icon.icon-best-wallet
-                    .btn__text
-                      span.btn__label
-                        | кошелек
-                      b.btn__name
-                        | Best Wallet
-              li.figure__item.to-best
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="to")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__icon
-                      i.icon.icon-best
-                    .btn__text
-                      span.btn__label
-                        | касса
-                      b.btn__name
-                        | партнера
-                        br
-                        | ПС БЭСТ
-              li.figure__item.to-wallet-one
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="to")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__icon
-                      i.icon.icon-wallet-one
-                    .btn__text
-                      span.btn__label
-                        | Перевод
-                      b.btn__name
-                        | в кошелек W1
-              li.figure__item.to-sberbank
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="to")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__text
-                      span.btn__label
-                        | банкомат
-                      b.btn__name
-                        | Сбербанка
-                    .btn__icon
-                      i.icon.icon-sberbank
-              li.figure__item.to-yandex
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="to")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__icon
-                      i.icon.icon-yandex
-                    .btn__text
-                      span.btn__label
-                        | Перевод
-                      b.btn__name
-                        | в Яндекс.Деньги
-              li.figure__item.to-card
-                .line
-                label.btn
-                  input.btn__input(type="radio", name="to")
-                  span.btn__marker
-                  .btn__inner
-                    .btn__icon
-                      i.icon.icon-visa-master
-                    .btn__text
-                      span.btn__label
-                        | карты
-                      b.btn__name
-                        | Visa
-                        br
-                        | MasterCard
-                        br
-                        | по миру
-              //- li.figure__item.to-card-rf
-              //-   .line
-              //-   label.btn
-              //-     input.btn__input(type="radio", name="to")
-              //-     span.btn__marker
-              //-     .btn__inner
-              //-       .btn__icon
-              //-         i.icon.icon-visa-master
-              //-       .btn__text
-              //-         span.btn__label
-              //-           | карты
-              //-         b.btn__name
-              //-           | Visa
-              //-           br
-              //-           | MasterCard
-              //-           br
-              //-           | по РФ
-              //- li.figure__item.to-webmoney
-              //-   .line
-              //-   label.btn
-              //-     input.btn__input(type="radio", name="to")
-              //-     span.btn__marker
-              //-     .btn__inner
-              //-       .btn__icon
-              //-         i.icon.icon-webmoney
-              //-       .btn__text
-              //-         span.btn__label
-              //-           | перевод
-              //-         b.btn__name
-              //-           | в WebMoney
-          //end figure
+            //begin figure
+            .figure
+              .figure__center
+              ul.figure__left
+                li.figure__item.from-best-wallet
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="from")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__text
+                        span.btn__label
+                          | кошелек
+                        b.btn__name
+                          | Best Wallet
+                      .btn__icon
+                        i.icon.icon-best-wallet
+                li.figure__item.from-card
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="from")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__text
+                        span.btn__label
+                          | карты
+                        b.btn__name
+                          | Visa
+                        b.btn__name
+                          | MasterCard
+                      .btn__icon
+                        i.icon.icon-visa-master
+                li.figure__item.from-best
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="from")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__text
+                        span.btn__label
+                          | касса
+                        b.btn__name
+                          | партнера
+                          br
+                          | ПС БЭСТ
+                      .btn__icon
+                        i.icon.icon-best
+                li.figure__item.from-credit-pilot
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="from")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__text
+                        span.btn__label
+                          | терминал
+                        b.btn__name
+                          | сети
+                          br
+                          | КредитПилот
+                      .btn__icon
+                        i.icon.icon-credit-pilot
+              ul.figure__right
+                li.figure__item.to-best-wallet
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-best-wallet
+                      .btn__text
+                        span.btn__label
+                          | кошелек
+                        b.btn__name
+                          | Best Wallet
+                li.figure__item.to-best
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-best
+                      .btn__text
+                        span.btn__label
+                          | касса
+                        b.btn__name
+                          | партнера
+                          br
+                          | ПС БЭСТ
+                li.figure__item.to-wallet-one
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-wallet-one
+                      .btn__text
+                        span.btn__label
+                          | Перевод
+                        b.btn__name
+                          | в кошелек W1
+                li.figure__item.to-sberbank
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__text
+                        span.btn__label
+                          | банкомат
+                        b.btn__name
+                          | Сбербанка
+                      .btn__icon
+                        i.icon.icon-sberbank
+                li.figure__item.to-yandex
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-yandex
+                      .btn__text
+                        span.btn__label
+                          | Перевод
+                        b.btn__name
+                          | в Яндекс.Деньги
+                li.figure__item.to-card
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-visa-master
+                      .btn__text
+                        span.btn__label
+                          | карты
+                        b.btn__name
+                          | Visa
+                          br
+                          | MasterCard
+                          br
+                          | по миру
+                li.figure__item.to-card-rf
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-visa-master
+                      .btn__text
+                        span.btn__label
+                          | карты
+                        b.btn__name
+                          | Visa
+                          br
+                          | MasterCard
+                          br
+                          | по РФ
+                li.figure__item.to-webmoney
+                  .line
+                  label.btn
+                    input.btn__input(type="radio", name="to")
+                    span.btn__marker
+                    .btn__inner
+                      .btn__icon
+                        i.icon.icon-webmoney
+                      .btn__text
+                        span.btn__label
+                          | перевод
+                        b.btn__name
+                          | в WebMoney
+              .tooltip
+                span.tooltip__value
+                  | Комиссия 1,5%
+                strong
+                  | На 1000 рублей комиссия составит 15 рублей
+            //end figure
+        //end commission
 
-      //end commission
+        //begin security
+        section.security
+          .security__left
+          .security__right
+          .l
+            .text
+              h2.title
+                | Безопасно и комфортно
+              p
+                | Все ваши средства застрахованы - в случае краха
+                | банка-партнера мы обязуемся возместить вам всю сумму
+                | остатков на балансе другого кошелька сети Best Wallet
 
-      //begin bottom-area
-      .bottom-area
-        .l
+              .contacts
+                strong.contacts__title Онлайн чат с поддержкой
+                ul.contacts__list
+                  li
+                    a(href="mailto:support@wallet.best")
+                      | email: support@wallet.best
+                  li
+                    a(href="tel:+780956744647")
+                      | phone: +7 8095 674 46 47
+              p
+                | Блокировка при помощи PIN
+                | и отпечатка пальца
+        //end security
 
-      //end bottom-area
+        //begin footer
+        .footer
+          .l
+            a.app-store(href="#")
+            .footer__logos
+              a(href="#").icon.icon-best-white
+              a(href="#").icon.icon-ipsp
+            span.footer__copy
+              | ©2014 Все права защищены
+            ul.footer__links
+              li
+                a(href="#")
+                  | публичная оферта
+              li
+                a(href="#")
+                  | политика конфиденциальности
+              li
+                a(href="#")
+                  | служба поддержки
+        //end footer
 
 
     //end out

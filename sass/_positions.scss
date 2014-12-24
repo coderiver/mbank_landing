@@ -7,12 +7,14 @@ $leftElements: (
 );
 //map for right figure elements
 $rightElements: (
-  to-best-wallet: (elTop:  -9px, elLeft:  823px, lineTop: 20px, lineRight: 34px),
-  to-best:        (elTop:  61px, elLeft:  821px, lineTop: 20px, lineRight: 34px),
-  to-wallet-one:  (elTop:  78px, elLeft: 1029px, lineTop: 32px, lineRight: 32px),
-  to-sberbank:    (elTop: 138px, elLeft:  837px, lineTop: 49px, lineRight: 22px),
-  to-yandex:      (elTop: 174px, elLeft: 1009px, lineTop: 20px, lineRight: 25px),
-  to-card:        (elTop: 256px, elLeft:  943px, lineTop: 25px, lineRight: 20px),
+  to-best-wallet: (elTop:  -9px, elLeft:  823px, lineTop:   20px, lineRight: 34px),
+  to-best:        (elTop:  61px, elLeft:  821px, lineTop:   20px, lineRight: 34px),
+  to-wallet-one:  (elTop:  78px, elLeft: 1029px, lineTop:   32px, lineRight: 32px),
+  to-sberbank:    (elTop: 138px, elLeft:  837px, lineTop:   49px, lineRight: 22px),
+  to-yandex:      (elTop: 179px, elLeft: 1009px, lineTop:   20px, lineRight: 25px),
+  to-card:        (elTop: 256px, elLeft:  943px, lineTop:   25px, lineRight: 20px),
+  to-card-rf:     (elTop: 336px, elLeft:  800px, lineTop:    2px, lineRight: 20px),
+  to-webmoney:    (elTop: 486px, elLeft:  841px, lineTop: -123px, lineRight: 33px),
 );
 
 @each $el, $map in $leftElements {
