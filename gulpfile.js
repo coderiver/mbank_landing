@@ -7,6 +7,7 @@ var gulp         = require('gulp'),
     changed      = require('gulp-changed'),
     svgstore     = require('gulp-svgstore'),
     svgmin       = require('gulp-svgmin'),
+    svgSprite    = require('gulp-svg-sprites'),
     browserSync  = require('browser-sync');
 
 //webserver
@@ -58,11 +59,23 @@ gulp.task('compass', function() {
 });
 
 //svg sprite
-gulp.task('svgsprite', function() {
-    return gulp.src('img/svg/*.svg')
+// gulp.task('svgsprite', function() {
+//     return gulp.src('img/svg/*.svg')
+//         .pipe(svgmin())
+//         .pipe(svgstore({ fileName: 'icons.svg', prefix: 'icon-' }))
+//         .pipe(gulp.dest('img/'));
+// });
+
+gulp.task('svgsprite', function () {
+    return gulp.src('img/svg/icons/*.svg')
         .pipe(svgmin())
-        .pipe(svgstore({ fileName: 'icons.svg', prefix: 'icon-' }))
-        .pipe(gulp.dest('img/'));
+        .pipe(svgSprite({
+            cssFile: '../sass/_svgsprite.sass',
+            selector: 'icon-%f',
+            svgPath: '../img/svg/%f',
+            padding: 6
+        }))
+        .pipe(gulp.dest('img'));
 });
 
 // watch

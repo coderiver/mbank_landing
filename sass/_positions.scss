@@ -1,40 +1,48 @@
 //map for left figure elements
 $leftElements: (
-  from-best-wallet:  (elTop: 113px, elRight: 996px, lineTop: -37px, lineLeft: 20px),
-  from-card:         (elTop: 162px, elRight: 773px, lineTop:  14px, lineLeft: 10px),
-  from-best:         (elTop: 248px, elRight: 859px, lineTop: -24px, lineLeft: 22px),
-  from-credit-pilot: (elTop: 412px, elRight: 939px, lineTop: -58px, lineLeft: 21px),
+  from-best-wallet:  (elTop: 113, elRight: 996, lineTop: -37, lineLeft: 20, marX: 29, marY: -20),
+  from-card:         (elTop: 162, elRight: 773, lineTop:  14, lineLeft: 10, marX: 14, marY:  -6),
+  from-best:         (elTop: 248, elRight: 859, lineTop: -24, lineLeft: 22, marX: 26, marY: -20),
+  from-credit-pilot: (elTop: 412, elRight: 939, lineTop: -58, lineLeft: 21, marX: 26, marY: -20),
 );
 //map for right figure elements
 $rightElements: (
-  to-best-wallet: (elTop:  -9px, elLeft:  823px, lineTop:   20px, lineRight: 34px),
-  to-best:        (elTop:  61px, elLeft:  821px, lineTop:   20px, lineRight: 34px),
-  to-wallet-one:  (elTop:  78px, elLeft: 1029px, lineTop:   32px, lineRight: 32px),
-  to-sberbank:    (elTop: 138px, elLeft:  837px, lineTop:   49px, lineRight: 22px),
-  to-yandex:      (elTop: 179px, elLeft: 1009px, lineTop:   20px, lineRight: 25px),
-  to-card:        (elTop: 256px, elLeft:  943px, lineTop:   25px, lineRight: 20px),
-  to-card-rf:     (elTop: 336px, elLeft:  800px, lineTop:    2px, lineRight: 20px),
-  to-webmoney:    (elTop: 486px, elLeft:  841px, lineTop: -123px, lineRight: 33px),
+  to-best-wallet: (elTop:  -9, elLeft:  823, lineTop:   20, lineRight: 34, marX: 30, marY: -20),
+  to-best:        (elTop:  61, elLeft:  821, lineTop:   20, lineRight: 34, marX: 24, marY: -20),
+  to-wallet-one:  (elTop:  78, elLeft: 1029, lineTop:   32, lineRight: 32, marX: 32, marY: -18),
+  to-sberbank:    (elTop: 138, elLeft:  837, lineTop:   49, lineRight: 22, marX: 45, marY: -11),
+  to-yandex:      (elTop: 179, elLeft: 1009, lineTop:   20, lineRight: 25, marX: 22, marY: -12),
+  to-card:        (elTop: 256, elLeft:  943, lineTop:   25, lineRight: 20, marX: 47, marY:  -6),
+  to-card-rf:     (elTop: 336, elLeft:  800, lineTop:    2, lineRight: 20, marX: 46, marY:  -6),
+  to-webmoney:    (elTop: 486, elLeft:  841, lineTop: -123, lineRight: 33, marX: 19, marY: -19),
 );
 
 @each $el, $map in $leftElements {
   .#{$el} {
-    top: map-get($map, elTop);
-    right: map-get($map, elRight);
+    top: map-get($map, elTop)+px;
+    right: map-get($map, elRight)+px;
     .line {
-      top: map-get($map, lineTop);
-      margin-left: map-get($map, lineLeft);
+      top: map-get($map, lineTop)+px;
+      margin-left: map-get($map, lineLeft)+px;
+    }
+    .btn__marker {
+      top: map-get($map, marX)+px;
+      right: map-get($map, marY)+px;
     }
   }
 }
 
 @each $el, $map in $rightElements {
   .#{$el} {
-    top: map-get($map, elTop);
-    left: map-get($map, elLeft);
+    top: map-get($map, elTop)+px;
+    left: map-get($map, elLeft)+px;
     .line {
-      top: map-get($map, lineTop);
-      margin-right: map-get($map, lineRight);
+      top: map-get($map, lineTop)+px;
+      margin-right: map-get($map, lineRight)+px;
+    }
+    .btn__marker {
+      top: map-get($map, marX)+px;
+      left: map-get($map, marY)+px;
     }
   }
 }

@@ -38,37 +38,37 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .icon { display: inline-block; }
 
-.icon-satellite { background: url('../img/icons.png') 0 -2239px no-repeat; width: 47px; height: 48px; }
+.icon-satellite { background: url('../img/icons.png') 0 -1592px no-repeat; width: 47px; height: 48px; }
 
-.icon-money { background: url('../img/icons.png') 0 -2028px no-repeat; width: 38px; height: 35px; }
+.icon-money { background: url('../img/icons.png') 0 -1493px no-repeat; width: 38px; height: 35px; }
 
-.icon-coins { background: url('../img/icons.png') 0 -1504px no-repeat; width: 47px; height: 47px; }
+.icon-coins { background: url('../img/icons.png') 0 -1137px no-repeat; width: 47px; height: 47px; }
 
-.icon-shield { background: url('../img/icons.png') 0 -2375px no-repeat; width: 30px; height: 36px; }
+.icon-shield { background: url('../img/icons.png') 0 -1682px no-repeat; width: 30px; height: 36px; }
 
-.icon-phone { background: url('../img/icons.png') 0 -2127px no-repeat; width: 26px; height: 44px; }
+.icon-phone { background: url('../img/icons.png') 0 -1538px no-repeat; width: 26px; height: 44px; }
 
-.icon-best-wallet { background: url('../img/icons.png') 0 -1210px no-repeat; width: 50px; height: 60px; }
+.icon-best-wallet { background: url('../img/icons.png') 0 -900px no-repeat; width: 50px; height: 60px; }
 
-.icon-best-wallet { background: url('../img/icons.png') 0 -1210px no-repeat; width: 50px; height: 60px; }
+.icon-best-wallet { background: url('../img/icons.png') 0 -900px no-repeat; width: 50px; height: 60px; }
 
-.icon-best { background: url('../img/icons.png') 0 -1366px no-repeat; width: 58px; height: 41px; }
+.icon-best { background: url('../img/icons.png') 0 -1056px no-repeat; width: 58px; height: 41px; }
 
-.icon-sberbank { background: url('../img/icons.png') 0 -2297px no-repeat; width: 116px; height: 22px; }
+.icon-sberbank { background: url('../img/icons.png') 0 -1650px no-repeat; width: 116px; height: 22px; }
 
-.icon-credit-pilot { background: url('../img/icons.png') 0 -1561px no-repeat; width: 93px; height: 33px; }
+.icon-credit-pilot { background: url('../img/icons.png') 0 -1194px no-repeat; width: 93px; height: 33px; }
 
-.icon-webmoney { background: url('../img/icons.png') 0 -2524px no-repeat; width: 102px; height: 25px; }
+.icon-webmoney { background: url('../img/icons.png') 0 -1831px no-repeat; width: 102px; height: 25px; }
 
-.icon-visa-master { background: url('../img/icons.png') 0 -2421px no-repeat; width: 53px; height: 44px; }
+.icon-visa-master { background: url('../img/icons.png') 0 -1728px no-repeat; width: 53px; height: 44px; }
 
-.icon-wallet-one { background: url('../img/icons.png') 0 -2475px no-repeat; width: 45px; height: 39px; }
+.icon-wallet-one { background: url('../img/icons.png') 0 -1782px no-repeat; width: 45px; height: 39px; }
 
-.icon-yandex { background: url('../img/icons.png') 0 -2559px no-repeat; width: 80px; height: 34px; }
+.icon-yandex { background: url('../img/icons.png') 0 -1866px no-repeat; width: 80px; height: 34px; }
 
-.icon-best-white { background: url('../img/icons.png') 0 -1280px no-repeat; width: 106px; height: 76px; }
+.icon-best-white { background: url('../img/icons.png') 0 -970px no-repeat; width: 106px; height: 76px; }
 
-.icon-ipsp { background: url('../img/icons.png') 0 -1727px no-repeat; width: 166px; height: 76px; }
+.icon-ipsp { background: url('../img/icons.png') 0 -1237px no-repeat; width: 166px; height: 76px; }
 
 .line { display: inline-block; }
 
@@ -108,7 +108,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .to-webmoney .line { background: url('../img/lines.png') 0 -1762px no-repeat; width: 172px; height: 142px; }
 .to-webmoney.is-active .line { background: url('../img/lines.png') 0 -1610px no-repeat; }
 
-.l { max-width: 1170px; padding: 0 5px; margin: auto; }
+.l { max-width: 1170px; padding: 0 30px; margin: auto; }
 
 .header { position: relative; z-index: 4; padding: 46px 0 97px; background-image: url("../img/header-bg.png"); background-repeat: no-repeat; color: #FFF; background-position: 50% 100%; background-size: cover; }
 .header .l { position: relative; }
@@ -118,7 +118,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .header__top-right { float: right; }
 
-.logo { margin: auto; background: url('../img/icons.png') 0 -1813px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
+.logo { margin: auto; background: url('../img/icons.png') 0 -1323px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
 
 .menu { display: inline-block; vertical-align: middle; font-size: 21px; line-height: 1.2; color: #fff; font-family: "bender_light", Helvetica, Arial, sans-serif; font-weight: normal; }
 .menu li { display: inline-block; vertical-align: middle; margin-right: 20px; }
@@ -178,9 +178,38 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .figure-text { display: block; margin: 84px 0 -18px; width: 42.73504%; font-size: 21px; line-height: 1.1; position: relative; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
 .figure-text b, .figure-text strong { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
 
+.tooltip { position: absolute; display: inline-block; top: 100%; left: 27px; margin-top: 26px; padding: 19px 15px; box-sizing: border-box; max-width: 510px; background: #e1275a; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 21px; line-height: 1.2; }
+.tooltip strong, .tooltip b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+.tooltip:before { content: ""; position: absolute; right: 4.70588%; bottom: 100%; width: 0px; height: 0px; border-style: solid; border-width: 0 0 11px 17px; border-color: transparent transparent #e1275a transparent; }
+
+.tooltip__value { display: block; }
+
+.contacts { color: #FFF; }
+.contacts a { text-decoration: none; color: inherit; }
+
+.contacts__title { display: block; }
+
+.footer { position: relative; padding: 80px 0 105px; text-align: center; }
+
+.footer__logos { margin: 20px 0; }
+.footer__logos .icon { vertical-align: middle; margin-right: 35px; text-decoration: none; }
+.footer__logos .icon:last-child { margin-right: 0; }
+
+.footer__copy { display: block; margin: 23px 0; font-size: 21px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.footer__links { color: #ec2845; font-size: 21px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; }
+.footer__links li { display: inline-block; margin-right: 40px; }
+.footer__links li:last-child { margin-right: 0; }
+.footer__links a { text-decoration: none; color: inherit; }
+.footer__links a:hover { text-decoration: underline; }
+
+.app-store { display: block; margin: 0 auto 34px; background: url('../img/icons.png') 0 0 no-repeat; width: 362px; height: 242px; }
+
+.bottom-area { position: relative; z-index: 5; background-color: #231A43; background-image: linear-gradient(28deg, #221745 0%, #511c51 215%); }
+
 .figure { position: relative; box-sizing: border-box; left: -27px; padding-left: 27px; width: 1170px; height: 500px; }
 
-.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -901px no-repeat; width: 299px; height: 299px; }
+.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -591px no-repeat; width: 299px; height: 299px; }
 
 .figure__left { float: left; }
 .figure__left .btn { text-align: right; }
@@ -220,67 +249,50 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .btn__name { display: block; font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
-.tooltip { position: absolute; top: 100%; left: 27px; margin-top: 26px; padding: 19px 15px; box-sizing: border-box; max-width: 510px; background: #e1275a; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 21px; line-height: 1.2; }
-.tooltip strong, .tooltip b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
-.tooltip:before { content: ""; position: absolute; right: 4.70588%; bottom: 100%; width: 0px; height: 0px; border-style: solid; border-width: 0 0 11px 17px; border-color: transparent transparent #e1275a transparent; }
-
-.tooltip__value { display: block; }
-
-.contacts { color: #FFF; }
-.contacts a { text-decoration: none; color: inherit; }
-
-.contacts__title { display: block; }
-
-.footer { position: relative; padding: 80px 0 105px; text-align: center; }
-
-.footer__logos { margin: 20px 0; }
-.footer__logos .icon { vertical-align: middle; margin-right: 35px; text-decoration: none; }
-.footer__logos .icon:last-child { margin-right: 0; }
-
-.footer__copy { display: block; margin: 23px 0; font-size: 21px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; }
-
-.footer__links { color: #ec2845; font-size: 21px; font-family: "bender", Helvetica, Arial, sans-serif; font-weight: normal; }
-.footer__links li { display: inline-block; margin-right: 40px; }
-.footer__links li:last-child { margin-right: 0; }
-.footer__links a { text-decoration: none; color: inherit; }
-.footer__links a:hover { text-decoration: underline; }
-
-.app-store { display: block; margin: 0 auto 34px; background: url('../img/icons.png') 0 0 no-repeat; width: 362px; height: 242px; }
-
-.bottom-area { position: relative; z-index: 5; background-color: #231A43; background-image: linear-gradient(28deg, #221745 0%, #511c51 215%); }
-
 .from-best-wallet { top: 113px; right: 996px; }
 .from-best-wallet .line { top: -37px; margin-left: 20px; }
+.from-best-wallet .btn__marker { top: 29px; right: -20px; }
 
 .from-card { top: 162px; right: 773px; }
 .from-card .line { top: 14px; margin-left: 10px; }
+.from-card .btn__marker { top: 14px; right: -6px; }
 
 .from-best { top: 248px; right: 859px; }
 .from-best .line { top: -24px; margin-left: 22px; }
+.from-best .btn__marker { top: 26px; right: -20px; }
 
 .from-credit-pilot { top: 412px; right: 939px; }
 .from-credit-pilot .line { top: -58px; margin-left: 21px; }
+.from-credit-pilot .btn__marker { top: 26px; right: -20px; }
 
 .to-best-wallet { top: -9px; left: 823px; }
 .to-best-wallet .line { top: 20px; margin-right: 34px; }
+.to-best-wallet .btn__marker { top: 30px; left: -20px; }
 
 .to-best { top: 61px; left: 821px; }
 .to-best .line { top: 20px; margin-right: 34px; }
+.to-best .btn__marker { top: 24px; left: -20px; }
 
 .to-wallet-one { top: 78px; left: 1029px; }
 .to-wallet-one .line { top: 32px; margin-right: 32px; }
+.to-wallet-one .btn__marker { top: 32px; left: -18px; }
 
 .to-sberbank { top: 138px; left: 837px; }
 .to-sberbank .line { top: 49px; margin-right: 22px; }
+.to-sberbank .btn__marker { top: 45px; left: -11px; }
 
 .to-yandex { top: 179px; left: 1009px; }
 .to-yandex .line { top: 20px; margin-right: 25px; }
+.to-yandex .btn__marker { top: 22px; left: -12px; }
 
 .to-card { top: 256px; left: 943px; }
 .to-card .line { top: 25px; margin-right: 20px; }
+.to-card .btn__marker { top: 47px; left: -6px; }
 
 .to-card-rf { top: 336px; left: 800px; }
 .to-card-rf .line { top: 2px; margin-right: 20px; }
+.to-card-rf .btn__marker { top: 46px; left: -6px; }
 
 .to-webmoney { top: 486px; left: 841px; }
 .to-webmoney .line { top: -123px; margin-right: 33px; }
+.to-webmoney .btn__marker { top: 19px; left: -19px; }

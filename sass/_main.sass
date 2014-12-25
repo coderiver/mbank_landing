@@ -233,6 +233,7 @@
   font-size: 50px
   line-height: 1.1
 
+
 .figure-text
   display: block
   margin: 84px 0 -18px
@@ -245,130 +246,9 @@
     +bender-b-i
 
 
-.figure
-  position: relative
-  box-sizing: border-box
-  left: -27px
-  padding-left: 27px
-  width: 1170px
-  height: 500px
-
-
-
-.figure__center
-  position: absolute
-  top: 50%
-  left: 50%
-  margin: -150px 0 0 -150px
-  +s(best-main)
-
-.figure__left
-  float: left
-  .btn
-    text-align: right
-  .btn__marker
-    top: 50%
-    right: -20px
-    bottom: auto
-    left: auto
-  .line
-    left: 100%
-
-.figure__right
-  float: right
-  .line
-    right: 100%
-
-.figure__item
-  position: absolute
-  .line
-    position: absolute
-
-
-.btn
-  display: inline-block
-  position: relative
-  user-select: none
-  .line
-    position: absolute
-
-.btn__input
-  position: absolute
-  opacity: 0
-
-.btn__marker
-  position: absolute
-  top: 50%
-  left: -20px
-  width: 10px
-  height: 10px
-  background-color: #59EEDE
-  border-radius: 50%
-  margin: -7px 0 0 -7px
-  &:before
-    content: ""
-    position: absolute
-    top: -2px
-    left: -2px
-    right: -2px
-    bottom: -2px
-    border: 1px solid #59EEDE
-    border-radius: 50%
-  .btn__input:checked + &,
-  .is-active &
-    background-color: #F03081
-    &:before
-      border-color: #F03081
-  .from-card &
-    top: 13px
-    right: -6px
-  .to-sberbank &
-    left: -12px
-    bottom: 5px
-    top: auto
-  .to-yandex
-    left: -12px
-  .to-card &,
-  .to-card-rf &
-    top: auto
-    bottom: 16px
-    left: -8px
-
-.btn__inner
-  display: table
-  table-layout: fixed
-  .to-sberbank &
-    display: block
-
-.btn__icon
-  display: table-cell
-  vertical-align: middle
-  font-size: 0
-  .to-sberbank &
-    display: block
-
-.btn__text
-  display: table-cell
-  vertical-align: middle
-  padding: 0 10px
-  font-size: 16px
-  line-height: 1
-  white-space: nowrap
-  .to-sberbank &
-    display: block
-    padding: 0 0 0 29px
-
-.btn__label
-  display: block
-  +proxima-l
-
-.btn__name
-  display: block
-  +proxima-b
-
-
 .tooltip
   position: absolute
+  display: inline-block
   top: 100%
   left: 27px
   margin-top: 26px

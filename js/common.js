@@ -13,38 +13,40 @@ head.ready(function() {
         toggleActiveClass(rightElements);
     })();
 
-    (function() {
-        var phone          = $('.js-phone'),
-            phoneOffsetTop = phone.offset().top,
-            phoneHeight    = phone.height() - 95, //because phone image has bottom shadow
-            point,
-            topPos;
+    if ( $('.js-phone').length ) {
+        (function() {
+            var phone          = $('.js-phone'),
+                phoneOffsetTop = phone.offset().top,
+                phoneHeight    = phone.height() - 95, //because phone image has bottom shadow
+                point,
+                topPos;
 
-        function calculateTopPos() {
-            topPos = $(window).height() / 2 - phoneHeight / 2;
-            point  = phoneOffsetTop + -topPos;
-        }
-
-        calculateTopPos();
-
-        $(window).on('resize', function() {
-            calculateTopPos();
-        });
-
-        $(document).on('scroll', function() {
-            if ( $(window).scrollTop() >= point ) {
-                phone.css({
-                    position   : 'fixed',
-                    top        : topPos
-                });
-            } else {
-                phone.css({
-                    position  : '',
-                    top       : ''
-                });
+            function calculateTopPos() {
+                topPos = $(window).height() / 2 - phoneHeight / 2;
+                point  = phoneOffsetTop + -topPos;
             }
-        });
-    })();
+
+            calculateTopPos();
+
+            $(window).on('resize', function() {
+                calculateTopPos();
+            });
+
+            $(document).on('scroll', function() {
+                if ( $(window).scrollTop() >= point ) {
+                    phone.css({
+                        position   : 'fixed',
+                        top        : topPos
+                    });
+                } else {
+                    phone.css({
+                        position  : '',
+                        top       : ''
+                    });
+                }
+            });
+        })();
+    }
 
     function resizeFigure() {
         var figure = $('.figure'),
