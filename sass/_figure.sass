@@ -5,6 +5,20 @@
   padding-left: 27px
   width: 1170px
   height: 500px
+  +tr(all 0.1s linear)
+  transform-origin: 0% 50%
+  &.is-mobile
+    transform-origin: 20% 50%
+  +bp
+    width: 590px
+    height: 1000px
+    margin: auto
+    left: 0
+    .figure__right
+      .btn__inner, .btn__icon, .btn__text
+        display: block
+      .btn__text
+        padding: 0
 
 .figure__center
   position: absolute

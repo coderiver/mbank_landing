@@ -53,7 +53,7 @@ gulp.task('compass', function() {
             sass: 'sass'
         }))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions', 'ie 8'],
+            browsers: ['last 4 versions', 'ie 8'],
             cascade: false
         }))
         .pipe(gulp.dest('css'));

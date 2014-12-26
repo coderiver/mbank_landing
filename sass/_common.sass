@@ -46,16 +46,14 @@ body
   overflow: hidden
 
 
-.svg-sprite
-  display: none !important
-  svg
+=bp
+  +r(1000)
+    @content
+
+.hide-on-mobile
+  +rmin(1000)
     display: none
 
-.svg-icon, .icon svg
-  width: 100%
-  height: 100%
-  fill: inherit
-  background: inherit
 
 .icon
   display: inline-block
@@ -74,6 +72,12 @@ body
     &.is-active
       .line
         +si(from-#{$s}-red, $lines)
+    +bp
+      .line
+        +s(from-#{$s}, $lines-mobile)
+      &.is-active
+        .line
+          +si(from-#{$s}-red, $lines-mobile)
 
 @each $s in best-wallet,best,wallet-one,sberbank,yandex,card,card-rf,webmoney
   .to-#{$s}
@@ -82,3 +86,9 @@ body
     &.is-active
       .line
         +si(to-#{$s}-red, $lines)
+    +bp
+      .line
+        +s(to-#{$s}, $lines-mobile)
+      &.is-active
+        .line
+          +si(to-#{$s}-red, $lines-mobile)

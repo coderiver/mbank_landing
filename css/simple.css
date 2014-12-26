@@ -131,7 +131,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 @media only screen and (max-width: 1000px) { .reference { right: 0; }
   .reference:before { content: ""; position: absolute; bottom: 100%; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 10px 0 0 10px; border-color: transparent transparent transparent #F95923; } }
 
-.dots { position: fixed; z-index: 6; top: 50%; right: 90px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.dots { position: fixed; z-index: 6; top: 50%; right: 90px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 .dots li { margin-top: 11px; width: 9px; height: 9px; border: 2px solid #C7575B; border-radius: 50%; transition: all 0.1s linear; cursor: pointer; }
 .dots li:hover, .dots li:focus, .dots li.is-active { background: #C7575B; }
 .dots li:first-child { margin-top: 0; }
@@ -139,7 +139,11 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .l { max-width: 1170px; padding: 0 30px; margin: auto; }
 
-.figure { position: relative; box-sizing: border-box; left: -27px; padding-left: 27px; width: 1170px; height: 500px; }
+.figure { position: relative; box-sizing: border-box; left: -27px; padding-left: 27px; width: 1170px; height: 500px; transition: all 0.1s linear; -webkit-transform-origin: 0% 50%; -ms-transform-origin: 0% 50%; transform-origin: 0% 50%; }
+.figure.is-mobile { -webkit-transform-origin: 20% 50%; -ms-transform-origin: 20% 50%; transform-origin: 20% 50%; }
+@media only screen and (max-width: 1000px) { .figure { width: 590px; height: 1000px; margin: auto; left: 0; }
+  .figure .figure__right .btn__inner, .figure .figure__right .btn__icon, .figure .figure__right .btn__text { display: block; }
+  .figure .figure__right .btn__text { padding: 0; } }
 
 .figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -591px no-repeat; width: 299px; height: 299px; }
 
@@ -382,11 +386,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .app-store:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("../img/btn-bg.jpg") no-repeat center center; background-color: #CD6364; }
 .app-store:after { content: ""; position: relative; display: block; background: url('../img/icons-simple.png') 0 0 no-repeat; width: 362px; height: 196px; }
 
-.boxshadow .footer { background: none; overflow: hidden; }
+.boxshadow .footer { background: none; overflow: hidden; margin-top: -1px; }
 .boxshadow .footer .l { position: relative; z-index: 2; }
 .boxshadow .app-store { position: relative; z-index: 1; box-shadow: 0 0 0 1500px #FFF; }
 .boxshadow .app-store:before { display: none; }
-
-@media only screen and (max-width: 1000px) { .figure { width: 590px; height: 1000px; margin: auto; left: 0; }
-  .figure .figure__right .btn__inner, .figure .figure__right .btn__icon, .figure .figure__right .btn__text { display: block; }
-  .figure .figure__right .btn__text { padding: 0; } }

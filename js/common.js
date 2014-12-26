@@ -50,9 +50,18 @@ head.ready(function() {
 
     function resizeFigure() {
         var figure      = $('.figure'),
-            figureWidth = figure.width() + 60,
+            figureWidth = figure.outerWidth() + 150,
             windowWidth = $(window).width(),
             scale;
+
+        if (windowWidth <= 1000 && !figure.hasClass('is-mobile')) {
+            figure.addClass('is-mobile');
+        }
+
+        if (windowWidth > 1000 && figure.hasClass('is-mobile')) {
+            figure.removeClass('is-mobile');
+        }
+
         if ( figureWidth > windowWidth ) {
             scale = windowWidth / figureWidth;
             figure.css({
@@ -69,7 +78,11 @@ head.ready(function() {
         }
     }
 
+    resizeFigure();
+
     $(window).on('resize', function() {
-        resizeFigure();
+        if ($(window).width() >= 640) {
+            resizeFigure();
+        }
     });
 });
