@@ -222,7 +222,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .figure__item { position: absolute; }
 .figure__item .line { position: absolute; }
 
-.btn { display: inline-block; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.btn { display: inline-block; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
 .btn .line { position: absolute; }
 
 .btn__input { position: absolute; opacity: 0; }
@@ -296,3 +296,40 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .to-webmoney { top: 486px; left: 841px; }
 .to-webmoney .line { top: -123px; margin-right: 33px; }
 .to-webmoney .btn__marker { top: 19px; left: -19px; }
+
+@media only screen and (max-width: 1000px) { .from-best-wallet { top: 84px; right: 213px; }
+  .from-best-wallet .line { top: 31px; margin-left: -40px; }
+  .from-best-wallet .btn__marker { top: 29px; right: -20px; }
+  .from-card { top: 253px; right: 162px; }
+  .from-card .line { top: 71px; margin-left: -109px; }
+  .from-card .btn__marker { top: 64px; right: 67px; }
+  .from-best { top: 212px; right: 347px; }
+  .from-best .line { top: 31px; margin-left: 20px; }
+  .from-best .btn__marker { top: 26px; right: -20px; }
+  .from-credit-pilot { top: 90px; right: 400px; }
+  .from-credit-pilot .line { top: 76px; margin-left: -154px; }
+  .from-credit-pilot .btn__marker { top: 70px; right: 92px; }
+  .to-best-wallet { top: 696px; left: 537px; }
+  .to-best-wallet .line { top: -147px; margin-right: 13px; }
+  .to-best-wallet .btn__marker { top: 30px; left: -20px; }
+  .to-best { top: 745px; left: 432px; }
+  .to-best .line { top: -151px; margin-right: -13px; }
+  .to-best .btn__marker { top: -19px; left: 12px; }
+  .to-wallet-one { top: 900px; left: 436px; }
+  .to-wallet-one .line { top: -253px; margin-right: 23px; }
+  .to-wallet-one .btn__marker { top: 32px; left: -18px; }
+  .to-sberbank { top: 752px; left: 301px; }
+  .to-sberbank .line { top: -124px; margin-right: -38px; }
+  .to-sberbank .btn__marker { top: -7px; left: 46px; }
+  .to-yandex { top: 926px; left: 267px; }
+  .to-yandex .line { top: -299px; margin-right: -60px; }
+  .to-yandex .btn__marker { top: -11px; left: 61px; }
+  .to-card { top: 859px; left: 156px; }
+  .to-card .line { top: -239px; margin-right: -96px; }
+  .to-card .btn__marker { top: -2px; left: 77px; }
+  .to-card-rf { top: 731px; left: 116px; }
+  .to-card-rf .line { top: -136px; margin-right: -73px; }
+  .to-card-rf .btn__marker { top: -19px; left: 33px; }
+  .to-webmoney { top: 755px; left: 0px; }
+  .to-webmoney .line { top: -198px; margin-right: -161px; }
+  .to-webmoney .btn__marker { top: -13px; left: 25px; } }

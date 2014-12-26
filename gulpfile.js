@@ -8,6 +8,7 @@ var gulp         = require('gulp'),
     svgstore     = require('gulp-svgstore'),
     svgmin       = require('gulp-svgmin'),
     svgSprite    = require('gulp-svg-sprites'),
+    svg2png      = require('gulp-svg2png'),
     browserSync  = require('browser-sync');
 
 //webserver
@@ -66,16 +67,29 @@ gulp.task('compass', function() {
 //         .pipe(gulp.dest('img/'));
 // });
 
-gulp.task('svgsprite', function () {
+gulp.task('svgSprite', function() {
     return gulp.src('img/svg/icons/*.svg')
         .pipe(svgmin())
         .pipe(svgSprite({
-            cssFile: '../sass/_svgsprite.sass',
-            selector: 'icon-%f',
-            svgPath: '../img/svg/%f',
-            padding: 6
+            svg: {
+                sprite: 'sprites/sprite.svg'
+            },
+            templates: {
+                css: require('fs').readFileSync('sass/lib/sprite-template.scss', "utf-8")
+            },
+            cssFile: '../sass/_svg-sprite.sass',
+            // selector: 'icon-%f',
+            svgPath: '../img/sprites/%f',
+            pngPath: '../img/sprites/%f',
+            padding: 10
         }))
         .pipe(gulp.dest('img'));
+});
+
+gulp.task('pngSprite', function() {
+    return gulp.src('img/sprites/*.svg')
+        .pipe(svg2png())
+        .pipe(gulp.dest('img/sprites'));
 });
 
 // watch
@@ -84,9 +98,9 @@ gulp.task('watch', function() {
     gulp.watch('jade/**/*.jade', ['jade']);
     gulp.watch('jade/includes/*.jade', ['jade-all']);
     gulp.watch('jade/layouts/*.jade', ['jade-all']);
-    gulp.watch('img/svg/*.svg', ['svgsprite']);
+    gulp.watch('img/svg/icons/*.svg', ['svgSprite', 'pngSprite']);
 });
 
-gulp.task('build',['jade', 'compass', 'svgsprite'], function() {});
+gulp.task('build',['jade', 'compass', 'svgSprite', 'pngSprite'], function() {});
 
 gulp.task('default',['build', 'browser-sync', 'watch'], function() {});

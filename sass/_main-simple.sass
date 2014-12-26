@@ -36,10 +36,10 @@
     background-repeat: no-repeat
   &:before
     top: 0
-    background: url('../img/body-bg-top.jpg')
+    background-image: url('../img/body-bg-top.jpg')
   &:after
     bottom: 0
-    background: url('../img/body-bg-bottom.jpg')
+    background-image: url('../img/body-bg-bottom.jpg')
   .out
     position: relative
     z-index: 1
@@ -248,7 +248,7 @@
     bottom: 100%
     +arr(17,11,#e1275a,br)
   +bp
-    max-width: percentage(238/1170)
+    max-width: percentage(238/590)
     left: -3px
     margin-top: 0
 
@@ -391,3 +391,16 @@
     box-shadow: 0 0 0 1500px #FFF
     &:before
       display: none
+
+.figure
+  +bp
+    width: 590px
+    height: 1000px
+    margin: auto
+    left: 0
+    .figure__right
+      .btn__inner, .btn__icon, .btn__text
+        display: block
+      .btn__text
+        padding: 0
+
