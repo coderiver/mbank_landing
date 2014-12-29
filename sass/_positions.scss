@@ -7,11 +7,14 @@ $leftElements: (
 );
 
 $leftElementsMobile: (
-  from-best-wallet:  (elTop:  84, elRight: 213, lineTop: 31, lineLeft:  -40, marX: 29, marY: -20),
-  from-card:         (elTop: 253, elRight: 162, lineTop: 71, lineLeft: -109, marX: 64, marY:  67),
+  from-best-wallet:  (elTop: 126, elRight: 146, lineTop: 31, lineLeft:  -40, marX: 29, marY: -20),
+  from-card:         (elTop: 279, elRight: 119, lineTop: 71, lineLeft: -109, marX: 64, marY:  67),
   from-best:         (elTop: 212, elRight: 347, lineTop: 31, lineLeft:   20, marX: 26, marY: -20),
   from-credit-pilot: (elTop:  90, elRight: 400, lineTop: 76, lineLeft: -154, marX: 70, marY:  92),
 );
+
+// from-best-wallet:  (elTop:  84, elRight: 213, lineTop: 31, lineLeft:  -40, marX: 29, marY: -20),
+// from-card:         (elTop: 253, elRight: 162, lineTop: 71, lineLeft: -109, marX: 64, marY:  67),
 
 
 //map for right figure elements
@@ -45,7 +48,7 @@ $rightElementsMobile: (
       top: map-get($map, lineTop)+px;
       margin-left: map-get($map, lineLeft)+px;
     }
-    .btn__marker {
+    .el__marker {
       top: map-get($map, marX)+px;
       right: map-get($map, marY)+px;
     }
@@ -60,7 +63,7 @@ $rightElementsMobile: (
       top: map-get($map, lineTop)+px;
       margin-right: map-get($map, lineRight)+px;
     }
-    .btn__marker {
+    .el__marker {
       top: map-get($map, marX)+px;
       left: map-get($map, marY)+px;
     }
@@ -76,7 +79,7 @@ $rightElementsMobile: (
         top: map-get($map, lineTop)+px;
         margin-left: map-get($map, lineLeft)+px;
       }
-      .btn__marker {
+      .el__marker {
         top: map-get($map, marX)+px;
         right: map-get($map, marY)+px;
       }
@@ -91,7 +94,7 @@ $rightElementsMobile: (
         top: map-get($map, lineTop)+px;
         margin-right: map-get($map, lineRight)+px;
       }
-      .btn__marker {
+      .el__marker {
         top: map-get($map, marX)+px;
         left: map-get($map, marY)+px;
       }

@@ -1,8 +1,8 @@
 head.ready(function() {
 
     (function() {
-        var leftElements = $('.figure__left').find('.figure__item').find('.btn');
-            rightElements = $('.figure__right').find('.figure__item').find('.btn');
+        var leftElements = $('.figure__left').find('.figure__item').find('.el');
+            rightElements = $('.figure__right').find('.figure__item').find('.el');
         function toggleActiveClass(elements) {
             elements.on('click', function() {
                 elements.parents('.figure__item').removeClass('is-active');
@@ -48,7 +48,7 @@ head.ready(function() {
         })();
     }
 
-    function resizeFigure() {
+    function scaleFigure() {
         var figure      = $('.figure'),
             figureWidth = figure.outerWidth() + 150,
             windowWidth = $(window).width(),
@@ -63,26 +63,45 @@ head.ready(function() {
         }
 
         if ( figureWidth > windowWidth ) {
-            scale = windowWidth / figureWidth;
+            scale  = windowWidth / figureWidth;
             figure.css({
                 '-webkit-transform': 'scale(' + scale + ')',
                     '-ms-transform': 'scale(' + scale + ')',
-                        'transform': 'scale(' + scale + ')',
+                        'transform': 'scale(' + scale + ')'
             });
         } else {
             figure.css({
                 '-webkit-transform': '',
                     '-ms-transform': '',
-                        'transform': '',
+                        'transform': ''
             });
         }
     }
 
-    resizeFigure();
+    scaleFigure();
 
     $(window).on('resize', function() {
         if ($(window).width() >= 640) {
-            resizeFigure();
+            scaleFigure();
         }
     });
+
+
+    function createFlipText(selector) {
+        var flipText = $(selector),
+            str      = flipText.text();
+
+        flipText.text('');
+
+        for (var i = 0; i < str.length; i++) {
+            flipText.append('<div class="char">' + str[i] +
+                               '<div class="char__top"><span>' + str[i] + '</span></div>' +
+                               '<div class="char__bottom"><span>' + str[i] + '</span></div>' +
+                            '</div>');
+        }
+    }
+
+    if ( $('.js-flip-text').length ) {
+        createFlipText('.js-flip-text');
+    }
 });

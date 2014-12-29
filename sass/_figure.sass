@@ -15,9 +15,9 @@
     margin: auto
     left: 0
     .figure__right
-      .btn__inner, .btn__icon, .btn__text
+      .el__inner, .el__icon, .el__text
         display: block
-      .btn__text
+      .el__text
         padding: 0
 
 .figure__center
@@ -29,9 +29,9 @@
 
 .figure__left
   float: left
-  .btn
+  .el
     text-align: right
-  .btn__marker
+  .el__marker
     top: 50%
     right: -20px
     bottom: auto
@@ -50,7 +50,7 @@
     position: absolute
 
 
-.btn
+.el
   display: inline-block
   position: relative
   user-select: none
@@ -58,11 +58,11 @@
   .line
     position: absolute
 
-.btn__input
+.el__input
   position: absolute
   opacity: 0
 
-.btn__marker
+.el__marker
   position: absolute
   top: 50%
   left: -20px
@@ -80,7 +80,7 @@
     bottom: -2px
     border: 1px solid #59EEDE
     border-radius: 50%
-  .btn__input:checked + &,
+  // .el__input:checked + &,
   .is-active &
     background-color: #F03081
     &:before
@@ -100,20 +100,20 @@
     bottom: 16px
     left: -8px
 
-.btn__inner
+.el__inner
   display: table
   table-layout: fixed
   .to-sberbank &
     display: block
 
-.btn__icon
+.el__icon
   display: table-cell
   vertical-align: middle
   font-size: 0
   .to-sberbank &
     display: block
 
-.btn__text
+.el__text
   display: table-cell
   vertical-align: middle
   padding: 0 10px
@@ -124,10 +124,10 @@
     display: block
     padding: 0 0 0 29px
 
-.btn__label
+.el__label
   display: block
   +proxima-l
 
-.btn__name
+.el__name
   display: block
   +proxima-b

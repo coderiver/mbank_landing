@@ -172,7 +172,7 @@
 
 .text
   font-size: 29px
-  p
+  > ul, > ul > li, > p
     margin: 29px 0
     &:first-child
       margin-top: 0
@@ -181,7 +181,7 @@
   &.text_left
     max-width: 730px
   +bp
-    p
+    > ul > li
       position: relative
       padding-left: 50px
       &:before
@@ -193,18 +193,11 @@
         +s(checkmark, $icons-simple)
 
 
-
-
-
 .commission
   padding-bottom: 90px
   .text
     text-align: center
     padding: 0 percentage(100/1170)
-    p
-      padding-left: 0
-      &:before
-        display: none
     +bp
       padding: 0
 
@@ -228,6 +221,9 @@
   +s(best-center, $icons-simple)
 
 
+.tooltip-wrap
+  position: relative
+
 .tooltip
   position: absolute
   display: inline-block
@@ -246,10 +242,10 @@
     position: absolute
     right: percentage(24/510)
     bottom: 100%
-    +arr(17,11,#e1275a,br)
+    +arr(17,11,#F8061D,br)
   +bp
     max-width: percentage(238/590)
-    left: -3px
+    left: -30px
     margin-top: 0
 
 .tooltip__value
@@ -261,16 +257,6 @@
   a
     text-decoration: none
     color: inherit
-  +bp
-    position: relative
-    padding-left: 50px
-    &:before
-      content: ""
-      position: absolute
-      top: 50%
-      left: 0
-      margin-top: -12px
-      +s(checkmark, $icons-simple)
 
 .contacts__title
   display: block
@@ -393,3 +379,38 @@
     &:before
       display: none
 
+.btn
+  display: block
+  margin: auto
+  padding: 31px 35px 29px
+  background-color: #FFF
+  background-image: linear-gradient( 78deg, rgb(236,40,69) 0%, rgb(249,92,115) 100%)
+  box-shadow: -1px 2px 2px 0px rgba(75, 24, 80, 0.11), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.21)
+  +proxima-b
+  font-size: 25px
+  line-height: 1
+  color: #FFF
+  text-decoration: none
+  text-transform: uppercase
+  text-align: center
+  .intro &
+    margin-top: 55px
+
+.icon-app-store-red
+  display: block
+  margin: 50px auto 0
+
+.counter
+  .flip-text
+    display: inline-block
+  +bp
+    text-align: center
+
+.counter__title
+  display: block
+  margin-bottom: 35px
+
+.char.rubl
+  +rubl
+  line-height: 58px
+  font-size: 42px

@@ -99,8 +99,14 @@ html
               | Более 2300 провайдеров
             p
               | Без комиссии
-            p
-              strong Нам уже доверили
+
+            .counter
+              strong.counter__title Нам уже доверили
+              .flip-text.js-flip-text
+                | 123 456
+              .flip-text
+                .char.rubl
+                  | i
       //end shop
 
       //begin transfers
@@ -145,142 +151,142 @@ html
               ul.figure__left
                 li.figure__item.from-best-wallet
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="from")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__text
-                        span.btn__label
+                  label.el
+                    input.el__input(type="radio", name="from")
+                    span.el__marker
+                    .el__inner
+                      .el__text
+                        span.el__label
                           | кошелек
-                        b.btn__name
+                        b.el__name
                           | Best Wallet
-                      .btn__icon
+                      .el__icon
                         i.icon.icon-best-wallet
                 li.figure__item.from-card
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="from")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__text
-                        span.btn__label
+                  label.el
+                    input.el__input(type="radio", name="from")
+                    span.el__marker
+                    .el__inner
+                      .el__text
+                        span.el__label
                           | карты
-                        b.btn__name
+                        b.el__name
                           | Visa
-                        b.btn__name
+                        b.el__name
                           | MasterCard
-                      .btn__icon
+                      .el__icon
                         i.icon.icon-visa-master
                 li.figure__item.from-best
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="from")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__text
-                        span.btn__label
+                  label.el
+                    input.el__input(type="radio", name="from")
+                    span.el__marker
+                    .el__inner
+                      .el__text
+                        span.el__label
                           | касса
-                        b.btn__name
+                        b.el__name
                           | партнера
                           br
                           | ПС БЭСТ
-                      .btn__icon
+                      .el__icon
                         i.icon.icon-best
                 li.figure__item.from-credit-pilot
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="from")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__text
-                        span.btn__label
+                  label.el
+                    input.el__input(type="radio", name="from")
+                    span.el__marker
+                    .el__inner
+                      .el__text
+                        span.el__label
                           | терминал
-                        b.btn__name
+                        b.el__name
                           | сети
                           br
                           | КредитПилот
-                      .btn__icon
+                      .el__icon
                         i.icon.icon-credit-pilot
               ul.figure__right
                 li.figure__item.to-best-wallet
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-best-wallet
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | кошелек
-                        b.btn__name
+                        b.el__name
                           | Best Wallet
                 li.figure__item.to-best
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-best
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | касса
-                        b.btn__name
+                        b.el__name
                           | партнера
                           br
                           | ПС БЭСТ
                 li.figure__item.to-wallet-one
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-wallet-one
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | Перевод
-                        b.btn__name
+                        b.el__name
                           | в кошелек W1
                 li.figure__item.to-sberbank
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__text
-                        span.btn__label
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__text
+                        span.el__label
                           | банкомат
-                        b.btn__name
+                        b.el__name
                           | Сбербанка
-                      .btn__icon
+                      .el__icon
                         i.icon.icon-sberbank
                 li.figure__item.to-yandex
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-yandex
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | Перевод
-                        b.btn__name
+                        b.el__name
                           | в Яндекс.Деньги
                 li.figure__item.to-card
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-visa-master
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | карты
-                        b.btn__name
+                        b.el__name
                           | Visa
                           br
                           | MasterCard
@@ -288,16 +294,16 @@ html
                           | по миру
                 li.figure__item.to-card-rf
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-visa-master
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | карты
-                        b.btn__name
+                        b.el__name
                           | Visa
                           br
                           | MasterCard
@@ -305,16 +311,16 @@ html
                           | по РФ
                 li.figure__item.to-webmoney
                   .line
-                  label.btn
-                    input.btn__input(type="radio", name="to")
-                    span.btn__marker
-                    .btn__inner
-                      .btn__icon
+                  label.el
+                    input.el__input(type="radio", name="to")
+                    span.el__marker
+                    .el__inner
+                      .el__icon
                         i.icon.icon-webmoney
-                      .btn__text
-                        span.btn__label
+                      .el__text
+                        span.el__label
                           | перевод
-                        b.btn__name
+                        b.el__name
                           | в WebMoney
               .tooltip
                 span.tooltip__value
@@ -372,7 +378,7 @@ html
                   | служба поддержки
         //end footer
 
-
+      a.reference(href="#")
     //end out
 
     //load scripts

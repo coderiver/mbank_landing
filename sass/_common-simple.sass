@@ -1,21 +1,22 @@
-+font("bender", bender)
-+font("bender_bold", bender_bold)
-+font("bender_light", bender_light)
+// +font("bender", bender)
+// +font("bender_bold", bender_bold)
+// +font("bender_light", bender_light)
 // +font("bender_italic", bender_italic)
 // +font("bender_bold_italic", bender_bold_italic)
 +font("proxima_nova", proxima_nova)
 +font("proxima_nova_bold", proxima_nova_bold)
 +font("proxima_nova_light", proxima_nova_light)
++font("als_rubl", als_rubl)
 
-=bender
-  font-family: "bender", Helvetica, Arial, sans-serif
-  font-weight: normal
-=bender-b
-  font-family: "bender_bold", Helvetica, Arial, sans-serif
-  font-weight: normal
-=bender-l
-  font-family: "bender_light", Helvetica, Arial, sans-serif
-  font-weight: normal
+// =bender
+//   font-family: "bender", Helvetica, Arial, sans-serif
+//   font-weight: normal
+// =bender-b
+//   font-family: "bender_bold", Helvetica, Arial, sans-serif
+//   font-weight: normal
+// =bender-l
+//   font-family: "bender_light", Helvetica, Arial, sans-serif
+//   font-weight: normal
 // =bender-i
 //   font-family: "bender_italic", Helvetica, Arial, sans-serif
 //   font-weight: normal
@@ -30,15 +31,19 @@
 =proxima-l
   font-family: "proxima_nova_light", Helvetica, Arial, sans-serif
   font-weight: normal
+=rubl
+  font-family: "als_rubl"
+  font-weight: normal
+  text-transform: none !important
 
 //break point
 =bp
   +r(1000)
     @content
 
-.hide-on-mobile
+.show-on-mobile
   +rmin(1000)
-    display: none
+    display: none !important
 
 body
   font-family: "proxima_nova", Arial, sans-serif
@@ -58,7 +63,7 @@ body
 .icon
   display: inline-block
 
-@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex,best-footer,ipsp
+@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex,best-footer,ipsp,app-store-red
   .icon-#{$s}
     +s(#{$s}, $icons-simple)
 

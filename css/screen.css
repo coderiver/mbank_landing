@@ -26,6 +26,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "proxima_nova"; src: url("../fonts/proxima_nova.eot"); src: url("../fonts/proxima_nova.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova.woff") format("woff"), url("../fonts/proxima_nova.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "proxima_nova_bold"; src: url("../fonts/proxima_nova_bold.eot"); src: url("../fonts/proxima_nova_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_bold.woff") format("woff"), url("../fonts/proxima_nova_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "proxima_nova_light"; src: url("../fonts/proxima_nova_light.eot"); src: url("../fonts/proxima_nova_light.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_light.woff") format("woff"), url("../fonts/proxima_nova_light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "als_rubl"; src: url("../fonts/als_rubl.eot"); src: url("../fonts/als_rubl.eot?#iefix") format("embedded-opentype"), url("../fonts/als_rubl.woff") format("woff"), url("../fonts/als_rubl.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: "proxima_nova", Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #FFF; background-color: #231A43; background-image: linear-gradient(28deg, #221745 0%, #511c51 100%); }
 body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
@@ -35,13 +36,13 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .icon { display: inline-block; }
 
-.icon-satellite { background: url('../img/icons.png') 0 -1592px no-repeat; width: 47px; height: 48px; }
+.icon-satellite { background: url('../img/icons.png') 0 -1682px no-repeat; width: 47px; height: 48px; }
 
 .icon-money { background: url('../img/icons.png') 0 -1493px no-repeat; width: 38px; height: 35px; }
 
 .icon-coins { background: url('../img/icons.png') 0 -1137px no-repeat; width: 47px; height: 47px; }
 
-.icon-shield { background: url('../img/icons.png') 0 -1682px no-repeat; width: 30px; height: 36px; }
+.icon-shield { background: url('../img/icons.png') 0 -1772px no-repeat; width: 30px; height: 36px; }
 
 .icon-phone { background: url('../img/icons.png') 0 -1538px no-repeat; width: 26px; height: 44px; }
 
@@ -51,17 +52,17 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .icon-best { background: url('../img/icons.png') 0 -1056px no-repeat; width: 58px; height: 41px; }
 
-.icon-sberbank { background: url('../img/icons.png') 0 -1650px no-repeat; width: 116px; height: 22px; }
+.icon-sberbank { background: url('../img/icons.png') 0 -1740px no-repeat; width: 116px; height: 22px; }
 
 .icon-credit-pilot { background: url('../img/icons.png') 0 -1194px no-repeat; width: 93px; height: 33px; }
 
-.icon-webmoney { background: url('../img/icons.png') 0 -1831px no-repeat; width: 102px; height: 25px; }
+.icon-webmoney { background: url('../img/icons.png') 0 -1921px no-repeat; width: 102px; height: 25px; }
 
-.icon-visa-master { background: url('../img/icons.png') 0 -1728px no-repeat; width: 53px; height: 44px; }
+.icon-visa-master { background: url('../img/icons.png') 0 -1818px no-repeat; width: 53px; height: 44px; }
 
-.icon-wallet-one { background: url('../img/icons.png') 0 -1782px no-repeat; width: 45px; height: 39px; }
+.icon-wallet-one { background: url('../img/icons.png') 0 -1872px no-repeat; width: 45px; height: 39px; }
 
-.icon-yandex { background: url('../img/icons.png') 0 -1866px no-repeat; width: 80px; height: 34px; }
+.icon-yandex { background: url('../img/icons.png') 0 -1956px no-repeat; width: 80px; height: 34px; }
 
 .icon-best-white { background: url('../img/icons.png') 0 -970px no-repeat; width: 106px; height: 76px; }
 
@@ -129,8 +130,263 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 @media only screen and (max-width: 1000px) { .to-webmoney .line { background: url('../img/lines-mobile.png') -1762px 0 no-repeat; width: 142px; height: 172px; }
   .to-webmoney.is-active .line { background: url('../img/lines-mobile.png') -1610px 0 no-repeat; } }
 
+.reference { position: fixed; z-index: 6; top: 36%; right: 0px; margin-top: -29px; background: url('../img/icons.png') 0 -1592px no-repeat; width: 78px; height: 80px; transition: all 0.2s linear; }
+
 .l { max-width: 1170px; padding: 0 30px; margin: auto; }
 
+.flip-text { display: block; font-size: 0; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.flip-text.no-animate .char__top, .flip-text.no-animate .char__bottom, .flip-text.no-animate .char__top:after, .flip-text.no-animate .char__bottom:after { -webkit-animation: none; animation: none; }
+.flip-text .char { display: inline-block; vertical-align: middle; position: relative; height: 70px; line-height: 70px; width: 47px; margin-left: 11px; border-radius: 4px; background: #702e73; background-image: linear-gradient(to top, #512154 0%, #943d98 100%); box-shadow: 0px 1px 1px 0px rgba(8, 22, 43, 0.5), 0 5px 0 0 #442049; color: #FFF; font-size: 45px; text-align: center; text-transform: uppercase; -webkit-perspective: 200px; perspective: 200px; }
+.flip-text .char:first-child { margin-left: 0; }
+.flip-text .char:before { content: ""; position: absolute; top: 50%; margin-top: -1px; left: 0; right: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.flip-text .char__top, .flip-text .char__bottom { position: absolute; z-index: 2; left: 0; right: 0; overflow: hidden; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-backface-visibility: hidden; backface-visibility: hidden; background-color: #702e73; }
+.flip-text .char__top:before, .flip-text .char__bottom:before { content: ""; position: absolute; z-index: 2; left: 0; right: 0; height: 1px; }
+.flip-text .char__top:after, .flip-text .char__bottom:after { content: ""; position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); opacity: 0; }
+.flip-text .char__top span, .flip-text .char__bottom span { position: absolute; left: 0; right: 0; width: 47px; height: 70px; }
+.flip-text .char__top { top: 0; bottom: 50%; border-top-left-radius: 4px; border-top-right-radius: 4px; -webkit-transform-origin: left bottom 0; -ms-transform-origin: left bottom 0; transform-origin: left bottom 0; -webkit-transform: rotateX(0deg); transform: rotateX(0deg); -webkit-animation: flip-char-top 0.5s linear infinite; animation: flip-char-top 0.5s linear infinite; background-image: linear-gradient(to top, #512154 -100%, #943d98 100%); }
+.flip-text .char__top:before { bottom: 0; background: rgba(0, 0, 0, 0.2); }
+.flip-text .char__top span { top: 0; }
+.flip-text .char__top:after { -webkit-animation: to-bottom 0.5s linear infinite; animation: to-bottom 0.5s linear infinite; border-top-left-radius: 4px; border-top-right-radius: 4px; border-top: 0px solid rgba(255, 255, 255, 0.4); }
+.flip-text .char__bottom { top: 50%; bottom: 0; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; -webkit-transform-origin: left top 0; -ms-transform-origin: left top 0; transform-origin: left top 0; -webkit-transform: rotateX(90deg); transform: rotateX(90deg); -webkit-animation: flip-char-bottom 0.5s linear infinite; animation: flip-char-bottom 0.5s linear infinite; background-image: linear-gradient(to top, #512154 0%, #943d98 200%); }
+.flip-text .char__bottom span { bottom: 0; background: rgba(255, 255, 255, 0.05); }
+.flip-text .char__bottom:before { top: 0; }
+.flip-text .char__bottom:after { -webkit-animation: to-top 0.5s linear infinite; animation: to-top 0.5s linear infinite; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: 0px solid rgba(255, 255, 255, 0.4); }
+
+@-webkit-keyframes flip-char-top { 0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); visibility: visible; }
+  50%, 99% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+  100% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); visibility: hidden; } }
+
+@keyframes flip-char-top { 0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); visibility: visible; }
+  50%, 99% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+  100% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); visibility: hidden; } }
+@-webkit-keyframes flip-char-bottom { 0%, 50% { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); visibility: visible; }
+  99% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); visibility: hidden; } }
+@keyframes flip-char-bottom { 0%, 50% { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); visibility: visible; }
+  99% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); visibility: hidden; } }
+@-webkit-keyframes to-bottom { from { opacity: 0; border-top-width: 0; }
+  to { opacity: 1; border-top-width: 5px; } }
+@keyframes to-bottom { from { opacity: 0; border-top-width: 0; }
+  to { opacity: 1; border-top-width: 5px; } }
+@-webkit-keyframes to-top { from { opacity: 1; border-bottom-width: 5px; }
+  to { opacity: 0; border-bottom-width: 0; } }
+@keyframes to-top { from { opacity: 1; border-bottom-width: 5px; }
+  to { opacity: 0; border-bottom-width: 0; } }
+.char:nth-child(1) .char__top { -webkit-animation-delay: 2.45s; animation-delay: 2.45s; }
+.char:nth-child(1) .char__top:after { -webkit-animation-delay: 2.45s; animation-delay: 2.45s; }
+
+.char:nth-child(1) .char__bottom { -webkit-animation-delay: 2.45s; animation-delay: 2.45s; }
+.char:nth-child(1) .char__bottom:after { -webkit-animation-delay: 2.45s; animation-delay: 2.45s; }
+
+.char:nth-child(2) .char__top { -webkit-animation-delay: 0.625s; animation-delay: 0.625s; }
+.char:nth-child(2) .char__top:after { -webkit-animation-delay: 0.625s; animation-delay: 0.625s; }
+
+.char:nth-child(2) .char__bottom { -webkit-animation-delay: 0.625s; animation-delay: 0.625s; }
+.char:nth-child(2) .char__bottom:after { -webkit-animation-delay: 0.625s; animation-delay: 0.625s; }
+
+.char:nth-child(3) .char__top { -webkit-animation-delay: 0.125s; animation-delay: 0.125s; }
+.char:nth-child(3) .char__top:after { -webkit-animation-delay: 0.125s; animation-delay: 0.125s; }
+
+.char:nth-child(3) .char__bottom { -webkit-animation-delay: 0.125s; animation-delay: 0.125s; }
+.char:nth-child(3) .char__bottom:after { -webkit-animation-delay: 0.125s; animation-delay: 0.125s; }
+
+.char:nth-child(4) .char__top { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+.char:nth-child(4) .char__top:after { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+
+.char:nth-child(4) .char__bottom { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+.char:nth-child(4) .char__bottom:after { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+
+.char:nth-child(5) .char__top { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
+.char:nth-child(5) .char__top:after { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
+
+.char:nth-child(5) .char__bottom { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
+.char:nth-child(5) .char__bottom:after { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
+
+.char:nth-child(6) .char__top { -webkit-animation-delay: 1.425s; animation-delay: 1.425s; }
+.char:nth-child(6) .char__top:after { -webkit-animation-delay: 1.425s; animation-delay: 1.425s; }
+
+.char:nth-child(6) .char__bottom { -webkit-animation-delay: 1.425s; animation-delay: 1.425s; }
+.char:nth-child(6) .char__bottom:after { -webkit-animation-delay: 1.425s; animation-delay: 1.425s; }
+
+.char:nth-child(7) .char__top { -webkit-animation-delay: 1.025s; animation-delay: 1.025s; }
+.char:nth-child(7) .char__top:after { -webkit-animation-delay: 1.025s; animation-delay: 1.025s; }
+
+.char:nth-child(7) .char__bottom { -webkit-animation-delay: 1.025s; animation-delay: 1.025s; }
+.char:nth-child(7) .char__bottom:after { -webkit-animation-delay: 1.025s; animation-delay: 1.025s; }
+
+.char:nth-child(8) .char__top { -webkit-animation-delay: 1.9s; animation-delay: 1.9s; }
+.char:nth-child(8) .char__top:after { -webkit-animation-delay: 1.9s; animation-delay: 1.9s; }
+
+.char:nth-child(8) .char__bottom { -webkit-animation-delay: 1.9s; animation-delay: 1.9s; }
+.char:nth-child(8) .char__bottom:after { -webkit-animation-delay: 1.9s; animation-delay: 1.9s; }
+
+.char:nth-child(9) .char__top { -webkit-animation-delay: 1.525s; animation-delay: 1.525s; }
+.char:nth-child(9) .char__top:after { -webkit-animation-delay: 1.525s; animation-delay: 1.525s; }
+
+.char:nth-child(9) .char__bottom { -webkit-animation-delay: 1.525s; animation-delay: 1.525s; }
+.char:nth-child(9) .char__bottom:after { -webkit-animation-delay: 1.525s; animation-delay: 1.525s; }
+
+.char:nth-child(10) .char__top { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+.char:nth-child(10) .char__top:after { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+
+.char:nth-child(10) .char__bottom { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+.char:nth-child(10) .char__bottom:after { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+
+.char:nth-child(11) .char__top { -webkit-animation-delay: 0.05s; animation-delay: 0.05s; }
+.char:nth-child(11) .char__top:after { -webkit-animation-delay: 0.05s; animation-delay: 0.05s; }
+
+.char:nth-child(11) .char__bottom { -webkit-animation-delay: 0.05s; animation-delay: 0.05s; }
+.char:nth-child(11) .char__bottom:after { -webkit-animation-delay: 0.05s; animation-delay: 0.05s; }
+
+.char:nth-child(12) .char__top { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+.char:nth-child(12) .char__top:after { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+
+.char:nth-child(12) .char__bottom { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+.char:nth-child(12) .char__bottom:after { -webkit-animation-delay: 1.15s; animation-delay: 1.15s; }
+
+.char:nth-child(13) .char__top { -webkit-animation-delay: 1.325s; animation-delay: 1.325s; }
+.char:nth-child(13) .char__top:after { -webkit-animation-delay: 1.325s; animation-delay: 1.325s; }
+
+.char:nth-child(13) .char__bottom { -webkit-animation-delay: 1.325s; animation-delay: 1.325s; }
+.char:nth-child(13) .char__bottom:after { -webkit-animation-delay: 1.325s; animation-delay: 1.325s; }
+
+.char:nth-child(14) .char__top { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.char:nth-child(14) .char__top:after { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+
+.char:nth-child(14) .char__bottom { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.char:nth-child(14) .char__bottom:after { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+
+.figure { position: relative; box-sizing: border-box; left: -27px; padding-left: 27px; width: 1170px; height: 500px; transition: all 0.1s linear; -webkit-transform-origin: 0% 50%; -ms-transform-origin: 0% 50%; transform-origin: 0% 50%; }
+.figure.is-mobile { -webkit-transform-origin: 20% 50%; -ms-transform-origin: 20% 50%; transform-origin: 20% 50%; }
+@media only screen and (max-width: 1000px) { .figure { width: 590px; height: 1000px; margin: auto; left: 0; }
+  .figure .figure__right .el__inner, .figure .figure__right .el__icon, .figure .figure__right .el__text { display: block; }
+  .figure .figure__right .el__text { padding: 0; } }
+
+.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -591px no-repeat; width: 299px; height: 299px; }
+
+.figure__left { float: left; }
+.figure__left .el { text-align: right; }
+.figure__left .el__marker { top: 50%; right: -20px; bottom: auto; left: auto; }
+.figure__left .line { left: 100%; }
+
+.figure__right { float: right; }
+.figure__right .line { right: 100%; }
+
+.figure__item { position: absolute; }
+.figure__item .line { position: absolute; }
+
+.el { display: inline-block; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
+.el .line { position: absolute; }
+
+.el__input { position: absolute; opacity: 0; }
+
+.el__marker { position: absolute; top: 50%; left: -20px; width: 10px; height: 10px; background-color: #59EEDE; border-radius: 50%; margin: -7px 0 0 -7px; }
+.el__marker:before { content: ""; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border: 1px solid #59EEDE; border-radius: 50%; }
+.is-active .el__marker { background-color: #F03081; }
+.is-active .el__marker:before { border-color: #F03081; }
+.from-card .el__marker { top: 13px; right: -6px; }
+.to-sberbank .el__marker { left: -12px; bottom: 5px; top: auto; }
+.el__marker .to-yandex { left: -12px; }
+.to-card .el__marker, .to-card-rf .el__marker { top: auto; bottom: 16px; left: -8px; }
+
+.el__inner { display: table; table-layout: fixed; }
+.to-sberbank .el__inner { display: block; }
+
+.el__icon { display: table-cell; vertical-align: middle; font-size: 0; }
+.to-sberbank .el__icon { display: block; }
+
+.el__text { display: table-cell; vertical-align: middle; padding: 0 10px; font-size: 16px; line-height: 1; white-space: nowrap; }
+.to-sberbank .el__text { display: block; padding: 0 0 0 29px; }
+
+.el__label { display: block; font-family: "proxima_nova_light", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.el__name { display: block; font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.from-best-wallet { top: 113px; right: 996px; }
+.from-best-wallet .line { top: -37px; margin-left: 20px; }
+.from-best-wallet .el__marker { top: 29px; right: -20px; }
+
+.from-card { top: 162px; right: 773px; }
+.from-card .line { top: 14px; margin-left: 10px; }
+.from-card .el__marker { top: 14px; right: -6px; }
+
+.from-best { top: 248px; right: 859px; }
+.from-best .line { top: -24px; margin-left: 22px; }
+.from-best .el__marker { top: 26px; right: -20px; }
+
+.from-credit-pilot { top: 412px; right: 939px; }
+.from-credit-pilot .line { top: -58px; margin-left: 21px; }
+.from-credit-pilot .el__marker { top: 26px; right: -20px; }
+
+.to-best-wallet { top: -9px; left: 823px; }
+.to-best-wallet .line { top: 20px; margin-right: 34px; }
+.to-best-wallet .el__marker { top: 30px; left: -20px; }
+
+.to-best { top: 61px; left: 821px; }
+.to-best .line { top: 20px; margin-right: 34px; }
+.to-best .el__marker { top: 24px; left: -20px; }
+
+.to-wallet-one { top: 78px; left: 1029px; }
+.to-wallet-one .line { top: 32px; margin-right: 32px; }
+.to-wallet-one .el__marker { top: 32px; left: -18px; }
+
+.to-sberbank { top: 138px; left: 837px; }
+.to-sberbank .line { top: 49px; margin-right: 22px; }
+.to-sberbank .el__marker { top: 45px; left: -11px; }
+
+.to-yandex { top: 179px; left: 1009px; }
+.to-yandex .line { top: 20px; margin-right: 25px; }
+.to-yandex .el__marker { top: 22px; left: -12px; }
+
+.to-card { top: 256px; left: 943px; }
+.to-card .line { top: 25px; margin-right: 20px; }
+.to-card .el__marker { top: 47px; left: -6px; }
+
+.to-card-rf { top: 336px; left: 800px; }
+.to-card-rf .line { top: 2px; margin-right: 20px; }
+.to-card-rf .el__marker { top: 46px; left: -6px; }
+
+.to-webmoney { top: 486px; left: 841px; }
+.to-webmoney .line { top: -123px; margin-right: 33px; }
+.to-webmoney .el__marker { top: 19px; left: -19px; }
+
+@media only screen and (max-width: 1000px) { .from-best-wallet { top: 126px; right: 146px; }
+  .from-best-wallet .line { top: 31px; margin-left: -40px; }
+  .from-best-wallet .el__marker { top: 29px; right: -20px; }
+  .from-card { top: 279px; right: 119px; }
+  .from-card .line { top: 71px; margin-left: -109px; }
+  .from-card .el__marker { top: 64px; right: 67px; }
+  .from-best { top: 212px; right: 347px; }
+  .from-best .line { top: 31px; margin-left: 20px; }
+  .from-best .el__marker { top: 26px; right: -20px; }
+  .from-credit-pilot { top: 90px; right: 400px; }
+  .from-credit-pilot .line { top: 76px; margin-left: -154px; }
+  .from-credit-pilot .el__marker { top: 70px; right: 92px; }
+  .to-best-wallet { top: 696px; left: 537px; }
+  .to-best-wallet .line { top: -147px; margin-right: 13px; }
+  .to-best-wallet .el__marker { top: 30px; left: -20px; }
+  .to-best { top: 745px; left: 432px; }
+  .to-best .line { top: -151px; margin-right: -13px; }
+  .to-best .el__marker { top: -19px; left: 12px; }
+  .to-wallet-one { top: 900px; left: 436px; }
+  .to-wallet-one .line { top: -253px; margin-right: 23px; }
+  .to-wallet-one .el__marker { top: 32px; left: -18px; }
+  .to-sberbank { top: 752px; left: 301px; }
+  .to-sberbank .line { top: -124px; margin-right: -38px; }
+  .to-sberbank .el__marker { top: -7px; left: 46px; }
+  .to-yandex { top: 926px; left: 267px; }
+  .to-yandex .line { top: -299px; margin-right: -60px; }
+  .to-yandex .el__marker { top: -11px; left: 61px; }
+  .to-card { top: 859px; left: 156px; }
+  .to-card .line { top: -239px; margin-right: -96px; }
+  .to-card .el__marker { top: -2px; left: 77px; }
+  .to-card-rf { top: 731px; left: 116px; }
+  .to-card-rf .line { top: -136px; margin-right: -73px; }
+  .to-card-rf .el__marker { top: -19px; left: 33px; }
+  .to-webmoney { top: 755px; left: 0px; }
+  .to-webmoney .line { top: -198px; margin-right: -161px; }
+  .to-webmoney .el__marker { top: -13px; left: 25px; } }
 .header { position: relative; z-index: 4; padding: 46px 0 97px; background-image: url("../img/header-bg.png"); background-repeat: no-repeat; color: #FFF; background-position: 50% 100%; background-size: cover; }
 .header .l { position: relative; }
 
@@ -228,133 +484,9 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .bottom-area { position: relative; z-index: 5; background-color: #231A43; background-image: linear-gradient(28deg, #221745 0%, #511c51 215%); }
 
-.figure { position: relative; box-sizing: border-box; left: -27px; padding-left: 27px; width: 1170px; height: 500px; transition: all 0.1s linear; -webkit-transform-origin: 0% 50%; -ms-transform-origin: 0% 50%; transform-origin: 0% 50%; }
-.figure.is-mobile { -webkit-transform-origin: 20% 50%; -ms-transform-origin: 20% 50%; transform-origin: 20% 50%; }
-@media only screen and (max-width: 1000px) { .figure { width: 590px; height: 1000px; margin: auto; left: 0; }
-  .figure .figure__right .btn__inner, .figure .figure__right .btn__icon, .figure .figure__right .btn__text { display: block; }
-  .figure .figure__right .btn__text { padding: 0; } }
+.counter .flip-text { display: inline-block; }
+@media only screen and (max-width: 1000px) { .counter { text-align: center; } }
 
-.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -591px no-repeat; width: 299px; height: 299px; }
+.counter__title { display: block; margin-bottom: 35px; }
 
-.figure__left { float: left; }
-.figure__left .btn { text-align: right; }
-.figure__left .btn__marker { top: 50%; right: -20px; bottom: auto; left: auto; }
-.figure__left .line { left: 100%; }
-
-.figure__right { float: right; }
-.figure__right .line { right: 100%; }
-
-.figure__item { position: absolute; }
-.figure__item .line { position: absolute; }
-
-.btn { display: inline-block; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
-.btn .line { position: absolute; }
-
-.btn__input { position: absolute; opacity: 0; }
-
-.btn__marker { position: absolute; top: 50%; left: -20px; width: 10px; height: 10px; background-color: #59EEDE; border-radius: 50%; margin: -7px 0 0 -7px; }
-.btn__marker:before { content: ""; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border: 1px solid #59EEDE; border-radius: 50%; }
-.btn__input:checked + .btn__marker, .is-active .btn__marker { background-color: #F03081; }
-.btn__input:checked + .btn__marker:before, .is-active .btn__marker:before { border-color: #F03081; }
-.from-card .btn__marker { top: 13px; right: -6px; }
-.to-sberbank .btn__marker { left: -12px; bottom: 5px; top: auto; }
-.btn__marker .to-yandex { left: -12px; }
-.to-card .btn__marker, .to-card-rf .btn__marker { top: auto; bottom: 16px; left: -8px; }
-
-.btn__inner { display: table; table-layout: fixed; }
-.to-sberbank .btn__inner { display: block; }
-
-.btn__icon { display: table-cell; vertical-align: middle; font-size: 0; }
-.to-sberbank .btn__icon { display: block; }
-
-.btn__text { display: table-cell; vertical-align: middle; padding: 0 10px; font-size: 16px; line-height: 1; white-space: nowrap; }
-.to-sberbank .btn__text { display: block; padding: 0 0 0 29px; }
-
-.btn__label { display: block; font-family: "proxima_nova_light", Helvetica, Arial, sans-serif; font-weight: normal; }
-
-.btn__name { display: block; font-family: "proxima_nova_bold", Helvetica, Arial, sans-serif; font-weight: normal; }
-
-.from-best-wallet { top: 113px; right: 996px; }
-.from-best-wallet .line { top: -37px; margin-left: 20px; }
-.from-best-wallet .btn__marker { top: 29px; right: -20px; }
-
-.from-card { top: 162px; right: 773px; }
-.from-card .line { top: 14px; margin-left: 10px; }
-.from-card .btn__marker { top: 14px; right: -6px; }
-
-.from-best { top: 248px; right: 859px; }
-.from-best .line { top: -24px; margin-left: 22px; }
-.from-best .btn__marker { top: 26px; right: -20px; }
-
-.from-credit-pilot { top: 412px; right: 939px; }
-.from-credit-pilot .line { top: -58px; margin-left: 21px; }
-.from-credit-pilot .btn__marker { top: 26px; right: -20px; }
-
-.to-best-wallet { top: -9px; left: 823px; }
-.to-best-wallet .line { top: 20px; margin-right: 34px; }
-.to-best-wallet .btn__marker { top: 30px; left: -20px; }
-
-.to-best { top: 61px; left: 821px; }
-.to-best .line { top: 20px; margin-right: 34px; }
-.to-best .btn__marker { top: 24px; left: -20px; }
-
-.to-wallet-one { top: 78px; left: 1029px; }
-.to-wallet-one .line { top: 32px; margin-right: 32px; }
-.to-wallet-one .btn__marker { top: 32px; left: -18px; }
-
-.to-sberbank { top: 138px; left: 837px; }
-.to-sberbank .line { top: 49px; margin-right: 22px; }
-.to-sberbank .btn__marker { top: 45px; left: -11px; }
-
-.to-yandex { top: 179px; left: 1009px; }
-.to-yandex .line { top: 20px; margin-right: 25px; }
-.to-yandex .btn__marker { top: 22px; left: -12px; }
-
-.to-card { top: 256px; left: 943px; }
-.to-card .line { top: 25px; margin-right: 20px; }
-.to-card .btn__marker { top: 47px; left: -6px; }
-
-.to-card-rf { top: 336px; left: 800px; }
-.to-card-rf .line { top: 2px; margin-right: 20px; }
-.to-card-rf .btn__marker { top: 46px; left: -6px; }
-
-.to-webmoney { top: 486px; left: 841px; }
-.to-webmoney .line { top: -123px; margin-right: 33px; }
-.to-webmoney .btn__marker { top: 19px; left: -19px; }
-
-@media only screen and (max-width: 1000px) { .from-best-wallet { top: 84px; right: 213px; }
-  .from-best-wallet .line { top: 31px; margin-left: -40px; }
-  .from-best-wallet .btn__marker { top: 29px; right: -20px; }
-  .from-card { top: 253px; right: 162px; }
-  .from-card .line { top: 71px; margin-left: -109px; }
-  .from-card .btn__marker { top: 64px; right: 67px; }
-  .from-best { top: 212px; right: 347px; }
-  .from-best .line { top: 31px; margin-left: 20px; }
-  .from-best .btn__marker { top: 26px; right: -20px; }
-  .from-credit-pilot { top: 90px; right: 400px; }
-  .from-credit-pilot .line { top: 76px; margin-left: -154px; }
-  .from-credit-pilot .btn__marker { top: 70px; right: 92px; }
-  .to-best-wallet { top: 696px; left: 537px; }
-  .to-best-wallet .line { top: -147px; margin-right: 13px; }
-  .to-best-wallet .btn__marker { top: 30px; left: -20px; }
-  .to-best { top: 745px; left: 432px; }
-  .to-best .line { top: -151px; margin-right: -13px; }
-  .to-best .btn__marker { top: -19px; left: 12px; }
-  .to-wallet-one { top: 900px; left: 436px; }
-  .to-wallet-one .line { top: -253px; margin-right: 23px; }
-  .to-wallet-one .btn__marker { top: 32px; left: -18px; }
-  .to-sberbank { top: 752px; left: 301px; }
-  .to-sberbank .line { top: -124px; margin-right: -38px; }
-  .to-sberbank .btn__marker { top: -7px; left: 46px; }
-  .to-yandex { top: 926px; left: 267px; }
-  .to-yandex .line { top: -299px; margin-right: -60px; }
-  .to-yandex .btn__marker { top: -11px; left: 61px; }
-  .to-card { top: 859px; left: 156px; }
-  .to-card .line { top: -239px; margin-right: -96px; }
-  .to-card .btn__marker { top: -2px; left: 77px; }
-  .to-card-rf { top: 731px; left: 116px; }
-  .to-card-rf .line { top: -136px; margin-right: -73px; }
-  .to-card-rf .btn__marker { top: -19px; left: 33px; }
-  .to-webmoney { top: 755px; left: 0px; }
-  .to-webmoney .line { top: -198px; margin-right: -161px; }
-  .to-webmoney .btn__marker { top: -13px; left: 25px; } }
+.char.rubl { font-family: "als_rubl"; font-weight: normal; text-transform: none !important; line-height: 58px; font-size: 42px; }

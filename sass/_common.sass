@@ -6,6 +6,7 @@
 +font("proxima_nova", proxima_nova)
 +font("proxima_nova_bold", proxima_nova_bold)
 +font("proxima_nova_light", proxima_nova_light)
++font("als_rubl", als_rubl)
 
 =bender
   font-family: "bender", Helvetica, Arial, sans-serif
@@ -30,6 +31,10 @@
 =proxima-l
   font-family: "proxima_nova_light", Helvetica, Arial, sans-serif
   font-weight: normal
+=rubl
+  font-family: "als_rubl"
+  font-weight: normal
+  text-transform: none !important
 
 
 body
@@ -92,3 +97,12 @@ body
       &.is-active
         .line
           +si(to-#{$s}-red, $lines-mobile)
+
+.reference
+  position: fixed
+  z-index: 6
+  top: 36%
+  right: 0px
+  margin-top: -29px
+  +s(reference)
+  +tr(all 0.2s linear)
