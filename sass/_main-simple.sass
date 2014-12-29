@@ -227,9 +227,8 @@
 .tooltip
   position: absolute
   display: inline-block
-  top: 100%
-  left: 27px
-  margin-top: 26px
+  top: 0
+  left: 0
   padding: 19px 15px
   box-sizing: border-box
   max-width: 510px
@@ -247,6 +246,8 @@
     max-width: percentage(238/590)
     left: -30px
     margin-top: 0
+  +r(700)
+    top: -50px
 
 .tooltip__value
   display: block
