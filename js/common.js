@@ -88,17 +88,61 @@ head.ready(function() {
 
 
     function createFlipText(selector) {
-        var flipText = $(selector),
-            str      = flipText.text();
+        var flipText    = $(selector),
+            str         = flipText.text(),
+            flipAnimDur = parseInt(flipText.data('duration'));
 
         flipText.text('');
 
         for (var i = 0; i < str.length; i++) {
-            flipText.append('<div class="char">' + str[i] +
-                               '<div class="char__top"><span>' + str[i] + '</span></div>' +
-                               '<div class="char__bottom"><span>' + str[i] + '</span></div>' +
+            flipText.append('<div class="char"><span></span>' +
+                               '<div class="char__top"><span></span></div>' +
+                               '<div class="char__bottom"><span></span></div>' +
                             '</div>');
         }
+
+        if (flipAnimDur) {
+            flipAnimDur = flipAnimDur;
+        } else {
+            flipAnimDur = 400;
+        }
+
+        flipText.find('.char').each(function(index) {
+            var char        = $(this),
+                charText    = char.find('span'),
+                charTop     = char.find('.char__top span'),
+                charBotom   = char.find('.char__bottom span'),
+                animClass   = 'is-animate',
+                targetValue = parseInt(str[index]),
+                minValue    = 0;
+
+            setTimeout(function() {
+                char.addClass(animClass);
+            }, flipAnimDur);
+
+            console.log(targetValue);
+
+            function setCharValue() {
+                setTimeout(function() {
+                    if ( targetValue >= minValue ) {
+                        charText.text(minValue);
+                        charTop.text(minValue);
+                        charBotom.text(minValue);
+                        minValue++;
+                        setCharValue();
+                    } else {
+                        char.removeClass(animClass);
+                    }
+                }, flipAnimDur);
+            }
+
+            setCharValue();
+
+            setInterval(function(){
+                minValue = 0;
+                setCharValue();
+            }, 15000);
+        });
     }
 
     if ( $('.js-flip-text').length ) {
