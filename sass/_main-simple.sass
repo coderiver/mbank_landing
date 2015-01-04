@@ -8,7 +8,8 @@
 
 .main-wrap__white
   padding-top: 80px
-  background: #FFF
+  background: url('../img/poligon-bg.png') no-repeat 0 32%, url('../img/poligon-bg2.png') no-repeat 0 64.2%
+  background-color: #FFF
 
 .section
   margin: 200px 0
@@ -37,9 +38,11 @@
   &:before
     top: 0
     background-image: url('../img/body-bg-top.jpg')
+    +gpu
   &:after
     bottom: 0
     background-image: url('../img/body-bg-bottom.jpg')
+    +gpu
   .out
     position: relative
     z-index: 1
@@ -121,13 +124,13 @@
     font-size: 50px
 
 .phone-container
-  width: 578px
+  width: 565px
   height: 998px
   margin: auto
 
 .phone
   position: relative
-  width: 578px
+  width: 565px
   height: 998px
   z-index: 2
   background: url("../img/phone-bg.png") no-repeat
@@ -291,7 +294,6 @@
       padding-left: 0
     &:after
       position: static
-      margin-top: 0
       width: auto
       padding-bottom: percentage(745/795)
       height: auto
@@ -338,7 +340,6 @@
       text-decoration: underline
   +bp
     font-size: 17px
-    // white-space: nowrap
     margin: 0 -30px
     li
       margin-right: 15px
@@ -404,10 +405,13 @@
 .counter
   +clr
   .flip-text
-    float: left
-    margin-right: 11px
+    display: inline-block
+    vertical-align: top
+    margin-right: 0.089em //4px
   +bp
     text-align: center
+    .flip-text
+      font-size: 35px
 
 .counter__title
   display: block
@@ -415,5 +419,5 @@
 
 .char.rubl
   +rubl
-  line-height: 58px
-  font-size: 42px
+  line-height: 1.2em //54px
+  font-size: 1em //42px

@@ -16,14 +16,14 @@ head.ready(function() {
     if ( $('.js-phone').length ) {
         (function() {
             var phone          = $('.js-phone'),
-                phoneOffsetTop = phone.offset().top,
+                // phoneOffsetTop = phone.offset().top,
                 phoneHeight    = phone.height() - 95, //because phone image has bottom shadow
                 point,
                 topPos;
 
             function calculateTopPos() {
                 topPos = $(window).height() / 2 - phoneHeight / 2;
-                point  = phoneOffsetTop + -topPos;
+                point  = phone.offset().top + -topPos;
             }
 
             calculateTopPos();
@@ -33,16 +33,18 @@ head.ready(function() {
             });
 
             $(document).on('scroll', function() {
-                if ( $(window).scrollTop() >= point ) {
-                    phone.css({
-                        position   : 'fixed',
-                        top        : topPos
-                    });
-                } else {
-                    phone.css({
-                        position  : '',
-                        top       : ''
-                    });
+                if ( $(window).width() >= 1000 ) {
+                    if ( $(window).scrollTop() >= point ) {
+                        phone.css({
+                            position   : 'fixed',
+                            top        : topPos
+                        });
+                    } else {
+                        phone.css({
+                            position  : '',
+                            top       : ''
+                        });
+                    }
                 }
             });
         })();
@@ -116,11 +118,9 @@ head.ready(function() {
                 targetValue = parseInt(str[index]),
                 minValue    = 0;
 
-            setTimeout(function() {
-                char.addClass(animClass);
-            }, flipAnimDur);
-
-            console.log(targetValue);
+            // setTimeout(function() {
+            //     char.addClass(animClass);
+            // }, flipAnimDur);
 
             function setCharValue() {
                 setTimeout(function() {
@@ -130,6 +130,9 @@ head.ready(function() {
                         charBotom.text(minValue);
                         minValue++;
                         setCharValue();
+                        if (!char.hasClass(animClass)) {
+                            char.addClass(animClass);
+                        }
                     } else {
                         char.removeClass(animClass);
                     }

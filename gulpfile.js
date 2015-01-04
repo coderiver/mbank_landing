@@ -98,9 +98,9 @@ gulp.task('watch', function() {
     gulp.watch('jade/**/*.jade', ['jade']);
     gulp.watch('jade/includes/*.jade', ['jade-all']);
     gulp.watch('jade/layouts/*.jade', ['jade-all']);
-    gulp.watch('img/svg/icons/*.svg', ['svgSprite', 'pngSprite']);
+    // gulp.watch('img/svg/icons/*.svg', ['svgSprite', 'pngSprite']);
 });
 
-gulp.task('build',['jade', 'compass', 'svgSprite', 'pngSprite'], function() {});
+gulp.task('build',['jade', 'compass'], function() {});
 
 gulp.task('default',['build', 'browser-sync', 'watch'], function() {});

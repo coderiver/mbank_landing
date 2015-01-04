@@ -1,8 +1,16 @@
+$BaseFontSize: 45px
+
 .flip-text
   display: block
   font-size: 0
+  font-size: $BaseFontSize
   white-space: nowrap
   user-select: none
+  &:after
+    content: ""
+    display: table
+    width: 100%
+    clear: both
   &.no-animate
     .char__top,
     .char__bottom,
@@ -10,26 +18,29 @@
     .char__bottom:after
       animation: none
 
-  $charwidth: 47px
-  $charheight: 70px
+  $charwidth: 1.044em //=47px/basefontsize
+  $charheight: 1.555em //=70px/basefontsize
   $dur: 0.4s
   $easing: linear
   $repeating: infinite
+  $radius: 4px
 
   .char
-    display: inline-block
-    vertical-align: middle
+    // display: inline-block
+    // vertical-align: middle
+    display: block
+    float: left
     position: relative
     height: $charheight
     line-height: $charheight
     width: $charwidth
-    margin-left: 11px
-    border-radius: 4px
+    margin-left: 0.244em //11px
+    border-radius: $radius
     background: rgb(112, 46, 115)
     background-image: linear-gradient( to top, rgb(81,33,84) 0%, rgb(148,61,152) 100%)
-    box-shadow: 0px 1px 1px 0px rgba(8, 22, 43, 0.5), 0 5px 0 0 #442049
+    box-shadow: 0px 1px 1px 0px rgba(8, 22, 43, 0.5), 0 0.111em 0 0 #442049
     color: #FFF
-    font-size: 45px
+    font-size: 1em
     text-align: center
     text-transform: uppercase
     perspective: 200px
@@ -93,8 +104,8 @@
   .char__top
     top: 0
     bottom: 50%
-    border-top-left-radius: 4px
-    border-top-right-radius: 4px
+    border-top-left-radius: $radius
+    border-top-right-radius: $radius
     transform-origin: left bottom 0
     transform: rotateX(0deg)
     // animation: flip-char-top $dur $easing $repeating
@@ -106,16 +117,16 @@
       top: 0
     &:after
       // animation: to-bottom $dur $easing $repeating
-      border-top-left-radius: 4px
-      border-top-right-radius: 4px
+      border-top-left-radius: $radius
+      border-top-right-radius: $radius
       border-top: 0px solid rgba(255,255,255,0.4)
 
 
   .char__bottom
     top: 50%
     bottom: 0
-    border-bottom-left-radius: 4px
-    border-bottom-right-radius: 4px
+    border-bottom-left-radius: $radius
+    border-bottom-right-radius: $radius
     transform-origin: left top 0
     transform: rotateX(90deg)
     // animation: flip-char-bottom $dur $easing $repeating
@@ -127,8 +138,8 @@
       top: 0
     &:after
       // animation: to-top $dur $easing $repeating
-      border-bottom-left-radius: 4px
-      border-bottom-right-radius: 4px
+      border-bottom-left-radius: $radius
+      border-bottom-right-radius: $radius
       border-bottom: 0px solid rgba(255,255,255,0.4)
 
 

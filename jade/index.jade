@@ -3,7 +3,7 @@ html
   head
     meta(charset="utf-8")
     title MBank
-    meta(name="viewport" content="initial-scale=1, user-scalable=no")
+    meta(name="viewport" content="width=640")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet" media="all" href="css/screen.css")
     <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -31,13 +31,19 @@ html
             .logo
               | Best Wallet
 
-          .text
+          .header__main
             h1.title-head
               | Электронный кошелек
               br
               | денежные переводы
               br
               strong без комиссии
+
+            .phone-container
+              .phone.js-phone
+                .phone__inner
+                  img(src="../img/screen.jpg", width="390", height="696" alt="")
+
             ul.capabilities
               li
                 .capabilities__icon
@@ -64,10 +70,6 @@ html
                   i.icon.icon-phone
                 .capabilities__text
                   | Бесплатное пополнение
-          .phone-container
-            .phone.js-phone
-              .phone__inner
-                img(src="../img/screen.jpg", width="390", height="696" alt="")
       //end header
 
       //begin intro
@@ -78,14 +80,18 @@ html
               | Оплачивайте услуги
               br
               | без комиссии
-            p
-              | Отправляйте деньги в более 2300 точек выдачи
-              | или на другой кошелек сети Best Wallet
-            p
-              | Бесплатно пополняйте кошелек карточкой или
-              | наличными во всех кассах «Связной», «Евросеть»,
-              | в сети касс и терминалов КредитПилот из более 27 000 точек.
-              | А так же во всех кассах партнеров ПС БЭСТ
+            ul
+              li
+                | Отправляйте деньги в более 2300 точек выдачи
+                | или на другой кошелек сети Best Wallet
+              li
+                | Бесплатно пополняйте кошелек карточкой или
+                | наличными во всех кассах «Связной», «Евросеть»,
+                | в сети касс и терминалов КредитПилот из более 27 000 точек.
+                | А так же во всех кассах партнеров ПС БЭСТ
+
+          button.btn.show-on-mobile
+            | Попробовать прямо сейчас
       //end intro
 
       //begin shop
@@ -94,11 +100,12 @@ html
           .text
             h2.title
               | Оплата сервисов
-            p
-              | Оплачивайте счета и пополняйте баланс телефона
-              | Более 2300 провайдеров
-            p
-              | Без комиссии
+            ul
+              li
+                | Оплачивайте счета и пополняйте баланс телефона
+                | более 2300 провайдеров
+              li
+                | Без комиссии
 
             .counter
               strong.counter__title Нам уже доверили
@@ -118,16 +125,19 @@ html
             p
               | Отправляйте или получайте деньги онлайн,
               | просто по номеру телефона
-            p
-              | На карты Visa/MasterCard по всему миру
-            p
-              | В другие электронные кошельки:
-              | W1, Яндекс.Деньги, WebMoney, Qiwi
-            p
-              | В более чем 6338 точек по РФ, и
-              | еще 30 884 точек по миру
-            p
-              | Дешево - тарифы начинаются с 0,5%
+            ul
+              li
+                | На карты Visa/MasterCard по всему миру
+              li
+                | В другие электронные кошельки:
+                | W1, Яндекс.Деньги, WebMoney, Qiwi
+              li
+                | В более чем 6338 точек по РФ, и
+                | еще 30 884 точек по миру
+              li
+                | Дешево - тарифы начинаются с 0,5%
+
+          a.icon.icon-app-store.show-on-mobile(href="#")
       //end transfers
 
       .bottom-area
@@ -322,39 +332,42 @@ html
                           | перевод
                         b.el__name
                           | в WebMoney
+            //end figure
+            .tooltip-wrap
               .tooltip
                 span.tooltip__value
                   | Комиссия 1,5%
                 strong
                   | На 1000 рублей комиссия составит 15 рублей
-            //end figure
         //end commission
 
         //begin security
         section.security
-          .security__left
-          .security__right
           .l
             .text
               h2.title
                 | Безопасно и комфортно
-              p
-                | Все ваши средства застрахованы - в случае краха
-                | банка-партнера мы обязуемся возместить вам всю сумму
-                | остатков на балансе другого кошелька сети Best Wallet
+              ul
+                li
+                  | Все ваши средства застрахованы - в случае краха
+                  | банка-партнера мы обязуемся возместить вам всю сумму
+                  | остатков на балансе другого кошелька сети Best Wallet
 
-              .contacts
-                strong.contacts__title Онлайн чат с поддержкой
-                ul.contacts__list
-                  li
-                    a(href="mailto:support@wallet.best")
-                      | email: support@wallet.best
-                  li
-                    a(href="tel:+780956744647")
-                      | phone: +7 8095 674 46 47
-              p
-                | Блокировка при помощи PIN
-                | и отпечатка пальца
+                li
+                  .contacts
+                    strong.contacts__title Онлайн чат с поддержкой
+                    ul.contacts__list
+                      li
+                        a(href="mailto:support@wallet.best")
+                          | email: support@wallet.best
+                      li
+                        a(href="tel:+780956744647")
+                          | phone: +7 8095 674 46 47
+                li
+                  | Блокировка при помощи PIN
+                  | и отпечатка пальца
+          .security__left
+          .security__right
         //end security
 
         //begin footer

@@ -36,6 +36,15 @@
   font-weight: normal
   text-transform: none !important
 
+//break point
+=bp
+  +r(1000)
+    @content
+
+.show-on-mobile
+  +rmin(1000)
+    display: none !important
+
 
 body
   font-family: "proxima_nova", Arial, sans-serif
@@ -63,7 +72,7 @@ body
 .icon
   display: inline-block
 
-@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex,best-white,ipsp
+@each $s in satellite,money,coins,shield,phone,best-wallet,best-wallet,best,sberbank,credit-pilot,webmoney,visa-master,wallet-one,yandex,best-white,ipsp,app-store
   .icon-#{$s}
     +s(#{$s})
 

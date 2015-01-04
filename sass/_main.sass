@@ -9,13 +9,30 @@
   background-size: cover
   .l
     position: relative
+  +bp
+    background-image: url('../img/header-bg.svg')
+    padding-top: 30px
 
 .header__top
   margin-bottom: 119px
   +clr
+  +bp
+    margin-bottom: 60px
 
 .header__top-right
   float: right
+  +bp
+    float: none
+    text-align: center
+    position: relative
+    margin-bottom: 25px
+
+.header__main
+  width: percentage(695/1170)
+  +r(1100)
+    width: 55%
+  +bp
+    width: auto
 
 .logo
   margin: auto
@@ -33,6 +50,8 @@
     display: inline-block
     vertical-align: middle
     margin-right: 20px
+    &:last-child
+      margin-right: 0
   a
     color: inherit
     text-decoration: none
@@ -44,6 +63,7 @@
 .lang
   display: inline-block
   vertical-align: middle
+  margin-left: 20px
   position: relative
   padding: 7px 5px
   color: #FFF
@@ -60,9 +80,12 @@
     left: 50%
     +arr(12,6,#fff,b)
     margin: 2px 0 0 -6px
+  +bp
+    position: absolute
+    top: -5px
+    right: 0
 
 .capabilities
-  margin-top: 60px
   +bender
   font-size: 22px
   line-height: 1.4
@@ -72,8 +95,18 @@
     width: 100%
     min-height: 50px
     margin-top: 19px
+    margin-top: 0.836em
     &:first-child
       margin-top: 0
+  +bp
+    text-align: center
+    li
+      display: inline-block
+      vertical-align: top
+      width: percentage(200/1170)
+      min-width: 165px
+      padding: 0 5px
+      margin: 0 0 15px 0
 
 .capabilities__icon
   display: table-cell
@@ -82,17 +115,26 @@
   width: 50px
   .icon
     vertical-align: middle
+  +bp
+    display: block
+    width: auto
+    height: 60px
 
 .capabilities__text
   display: table-cell
   vertical-align: middle
   padding-left: 25px
+  +bp
+    display: block
+    padding-left: 0
+    line-height: 1.1
 
 .phone-container
   position: absolute
   top: 195px
-  right: percentage(-73/1170)
-  width: 578px
+  // right: percentage(-60/1170)
+  right: -39px
+  width: 565px
   height: 998px
   &:after
     content: ""
@@ -104,10 +146,15 @@
     right: -317px
     background: url("../img/phone-shadow.png") no-repeat
     pointer-events: none
+  +bp
+    position: relative
+    top: 0
+    right: 0
+    margin: auto
 
 .phone
   position: relative
-  width: 578px
+  width: 565px
   height: 998px
   z-index: 2
   background: url("../img/phone-bg.png") no-repeat
@@ -127,11 +174,14 @@
 .intro
   position: relative
   z-index: 1
-  margin-top: -130px
-  padding: 297px 0 340px
+  margin-top: -190px
+  padding: 357px 0 340px
   min-height: 484px
   background: url("../img/intro-bg.jpg") no-repeat 50% 0
   background-size: cover
+  +bp
+    min-height: 0
+    padding-top: 240px
 
 .shop
   position: relative
@@ -141,12 +191,18 @@
   min-height: 520px
   background: url("../img/shop-bg.png") no-repeat 50% 0
   background-size: cover
+  +bp
+    min-height: 0
+    padding: 230px 0 150px
 
 .transfers
   padding: 485px 0 167px
   min-height: 485px
   background: url("../img/transfers-bg.jpg") no-repeat 50% 100%
   background-size: cover
+  +bp
+    min-height: 0
+    padding: 430px 0 150px
 
 .commission
   position: relative
@@ -188,6 +244,15 @@
   .text
     padding-left: percentage(695/1170)
     width: auto
+  +bp
+    padding-bottom: 20px
+    &:after
+      top: auto
+      height: 50%
+      width: 100%
+      background-size: 100% auto
+    .text
+      padding-left: 0
 
 .security__left
   position: absolute
@@ -197,6 +262,17 @@
   height: 745px
   margin-top: -372px
   background: url("../img/security.png") no-repeat 50% 50%
+  +bp
+    position: relative
+    z-index: 2
+    top: 0
+    right: 0
+    width: auto
+    height: auto
+    padding-bottom: percentage(745/795)
+    margin: 10px 40px 0
+    box-sizing: border-box
+    background-size: 100% auto
 
 .security__right
   position: absolute
@@ -206,32 +282,55 @@
   width: percentage(875/1800)
   background-color: #3E103B
   opacity: 0.46
+  +bp
+    display: none
 
 
 .text
   width: percentage(695/1170)
   font-size: 29px
   line-height: 1.15
-  p
-    margin: 39px 0
+  > ul, > ul > li, > p
+    margin: 29px 0
     &:first-child
       margin-top: 0
     &:last-child
       margin-bottom: 0
   b, strong
     +proxima-b
+  +r(1100)
+    width: 55%
+  +bp
+    width: auto
+    // font-size: 24px
+    > ul > li
+      position: relative
+      padding-left: 50px
+      &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        margin-top: -12px
+        +s(checkmark)
 
 .title-head
   font-size: 60px
   line-height: 1.25
+  margin-bottom: 60px
   +bender-i
   strong, b
     +bender-b-i
+  +bp
+    font-size: 50px
+    text-align: center
 
 .title
   +bender-b-i
   font-size: 50px
   line-height: 1.1
+  // +bp
+  //   font-size: 40px
 
 
 .figure-text
@@ -244,7 +343,14 @@
   +bender-i
   b, strong
     +bender-b-i
+  +bp
+    width: auto
+    text-align: center
+    padding: 0 20px
 
+
+.tooltip-wrap
+  position: relative
 
 .tooltip
   position: absolute
@@ -267,6 +373,12 @@
     right: percentage(24/510)
     bottom: 100%
     +arr(17,11,#e1275a,br)
+  +bp
+    max-width: percentage(238/590)
+    left: -30px
+    margin-top: 0
+  +r(700)
+    top: -50px
 
 .tooltip__value
   display: block
@@ -286,6 +398,8 @@
   position: relative
   padding: 80px 0 105px
   text-align: center
+  +bp
+    padding-bottom: 40px
 
 .footer__logos
   margin: 20px 0
@@ -316,6 +430,13 @@
     color: inherit
     &:hover
       text-decoration: underline
+  +bp
+    font-size: 17px
+    li
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
+
 
 .app-store
   display: block
@@ -332,10 +453,13 @@
 .counter
   +clr
   .flip-text
-    float: left
-    margin-right: 11px
+    display: inline-block
+    vertical-align: top
+    margin-right: 0.089em //4px
   +bp
     text-align: center
+    // .flip-text
+    //   font-size: 35px
 
 .counter__title
   display: block
@@ -343,5 +467,26 @@
 
 .char.rubl
   +rubl
-  line-height: 58px
-  font-size: 42px
+  line-height: 1.2em //54px
+  font-size: 1em //42px
+
+.btn
+  display: block
+  margin: auto
+  padding: 31px 35px 29px
+  background-color: #FFF
+  background-image: linear-gradient( 78deg, rgb(236,40,69) 0%, rgb(249,92,115) 100%)
+  box-shadow: -1px 2px 2px 0px rgba(75, 24, 80, 0.11), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.21)
+  +proxima-b
+  font-size: 25px
+  line-height: 1
+  color: #FFF
+  text-decoration: none
+  text-transform: uppercase
+  text-align: center
+  .intro &
+    margin-top: 55px
+
+.icon-app-store
+  display: block
+  margin: 50px auto 0
