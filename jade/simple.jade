@@ -36,42 +36,43 @@ html
             //begin wallet
             section.section.wallet
               .l
-                h1.title-head
-                  | Электронный кошелек
-                  br
-                  | денежные переводы
-                  br
-                  strong без комиссии
-                .phone-container
-                  .phone
-                    .phone__inner
-                      img(src="../img/screen.jpg", width="390", height="696" alt="")
-                ul.capabilities
-                  li
-                    .capabilities__icon
-                      i.icon.icon-satellite
-                    .capabilities__text
-                      | Оплачивайте сервисы
-                  li
-                    .capabilities__icon
-                      i.icon.icon-money
-                    .capabilities__text
-                      | Отправляйте деньги близким
-                  li
-                    .capabilities__icon
-                      i.icon.icon-coins
-                    .capabilities__text
-                      b Без комиссии
-                  li
-                    .capabilities__icon
-                      i.icon.icon-shield
-                    .capabilities__text
-                      | Безопасно и комфортно
-                  li
-                    .capabilities__icon
-                      i.icon.icon-phone
-                    .capabilities__text
-                      | Бесплатное пополнение
+                .wallet__main
+                  h1.title-head
+                    | Электронный кошелек
+                    br
+                    | денежные переводы
+                    br
+                    strong без комиссии
+                  .phone-container
+                    .phone.js-phone
+                      .phone__inner
+                        img(src="../img/screen.jpg", width="314", height="559" alt="")
+                  ul.capabilities
+                    li
+                      .capabilities__icon
+                        i.icon.icon-satellite
+                      .capabilities__text
+                        | Оплачивайте сервисы
+                    li
+                      .capabilities__icon
+                        i.icon.icon-money
+                      .capabilities__text
+                        | Отправляйте деньги близким
+                    li
+                      .capabilities__icon
+                        i.icon.icon-coins
+                      .capabilities__text
+                        b Без комиссии
+                    li
+                      .capabilities__icon
+                        i.icon.icon-shield
+                      .capabilities__text
+                        | Безопасно и комфортно
+                    li
+                      .capabilities__icon
+                        i.icon.icon-phone
+                      .capabilities__text
+                        | Бесплатное пополнение
             //end wallet
 
             //begin intro
@@ -142,7 +143,7 @@ html
             //end transfers
 
             //begin commission
-            section.section.commission
+            section.section.commission.js-bottom-point
               .l
                 .text
                   h2.title

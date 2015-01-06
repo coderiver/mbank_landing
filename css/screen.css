@@ -353,13 +353,13 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .capabilities__text { display: table-cell; vertical-align: middle; padding-left: 25px; }
 @media only screen and (max-width: 1000px) { .capabilities__text { display: block; padding-left: 0; line-height: 1.1; } }
 
-.phone-container { position: absolute; top: 195px; right: -39px; width: 565px; height: 998px; }
-.phone-container:after { content: ""; position: absolute; z-index: 1; width: 1453px; height: 1193px; top: -242px; right: -317px; background: url("../img/phone-shadow.png") no-repeat; pointer-events: none; }
+.phone-container { position: absolute; top: 195px; right: 0; width: 452px; height: 798px; }
+.phone-container:after { content: ""; position: absolute; z-index: 1; width: 1162px; height: 954px; top: -194px; right: -254px; background: url("../img/phone-shadow.png") no-repeat; pointer-events: none; }
 @media only screen and (max-width: 1000px) { .phone-container { position: relative; top: 0; right: 0; margin: auto; } }
 
-.phone { position: relative; width: 565px; height: 998px; z-index: 2; background: url("../img/phone-bg.png") no-repeat; transition: all 0.3s ease; }
+.phone { position: relative; width: 452px; height: 798px; z-index: 2; background: url("../img/phone-bg.png") no-repeat; transition: all 0.3s ease; }
 
-.phone__inner { position: absolute; z-index: 2; top: 99px; left: 87px; width: 390px; height: 696px; background: black; overflow: hidden; }
+.phone__inner { position: absolute; z-index: 2; top: 79px; left: 69px; width: 314px; height: 558px; background: black; overflow: hidden; }
 
 .intro { position: relative; z-index: 1; margin-top: -190px; padding: 357px 0 340px; min-height: 484px; background: url("../img/intro-bg.jpg") no-repeat 50% 0; background-size: cover; }
 @media only screen and (max-width: 1000px) { .intro { min-height: 0; padding-top: 240px; } }
@@ -368,7 +368,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 @media only screen and (max-width: 1000px) { .shop { min-height: 0; padding: 230px 0 150px; } }
 
 .transfers { padding: 485px 0 167px; min-height: 485px; background: url("../img/transfers-bg.jpg") no-repeat 50% 100%; background-size: cover; }
-@media only screen and (max-width: 1000px) { .transfers { min-height: 0; padding: 430px 0 150px; } }
+@media only screen and (max-width: 1000px) { .transfers { min-height: 0; padding: 430px 0 110px; } }
 
 .commission { position: relative; padding: 92px 0 168px; }
 .commission .text { width: auto; padding: 0 8.54701%; text-align: center; }
@@ -388,7 +388,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .security__right { position: absolute; top: 0; right: 0; bottom: 0; width: 48.61111%; background-color: #3E103B; opacity: 0.46; }
 @media only screen and (max-width: 1000px) { .security__right { display: none; } }
 
-.text { width: 59.40171%; font-size: 29px; line-height: 1.15; }
+.text { width: 59.40171%; font-size: 24px; line-height: 1.15; }
 .text > ul, .text > ul > li, .text > p { margin: 29px 0; }
 .text > ul:first-child, .text > ul > li:first-child, .text > p:first-child { margin-top: 0; }
 .text > ul:last-child, .text > ul > li:last-child, .text > p:last-child { margin-bottom: 0; }
@@ -398,11 +398,11 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
   .text > ul > li { position: relative; padding-left: 50px; }
   .text > ul > li:before { content: ""; position: absolute; top: 50%; left: 0; margin-top: -12px; background: url('../img/icons.png') 0 -1107px no-repeat; width: 29px; height: 23px; } }
 
-.title-head { font-size: 60px; line-height: 1.25; margin-bottom: 60px; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
+.title-head { font-size: 48px; line-height: 1.25; margin-bottom: 60px; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
 .title-head strong, .title-head b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
 @media only screen and (max-width: 1000px) { .title-head { font-size: 50px; text-align: center; } }
 
-.title { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 50px; line-height: 1.1; }
+.title { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 40px; line-height: 1.1; }
 
 .figure-text { display: block; margin: 84px 0 -18px; width: 42.73504%; font-size: 21px; line-height: 1.1; position: relative; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
 .figure-text b, .figure-text strong { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
@@ -410,7 +410,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .tooltip-wrap { position: relative; }
 
-.tooltip { position: absolute; display: inline-block; top: 100%; left: 27px; margin-top: 26px; padding: 19px 15px; box-sizing: border-box; max-width: 510px; background: #e1275a; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 21px; line-height: 1.2; }
+.tooltip { position: absolute; display: inline-block; top: 100%; left: 27px; margin-top: 26px; padding: 19px 15px; box-sizing: border-box; max-width: 510px; background: #e1275a; font-family: "bender_italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 20px; line-height: 1.2; }
 .tooltip strong, .tooltip b { font-family: "bender_bold_italic", Helvetica, Arial, sans-serif; font-weight: normal; }
 .tooltip:before { content: ""; position: absolute; right: 4.70588%; bottom: 100%; width: 0px; height: 0px; border-style: solid; border-width: 0 0 11px 17px; border-color: transparent transparent #e1275a transparent; }
 @media only screen and (max-width: 1000px) { .tooltip { max-width: 40.33898%; left: -30px; margin-top: 0; } }
@@ -447,7 +447,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .counter { *zoom: 1; }
 .counter:after { content: " "; display: table; clear: both; }
-.counter .flip-text { display: inline-block; vertical-align: top; margin-right: 0.089em; }
+.counter .flip-text { display: inline-block; vertical-align: top; margin-right: 0.089em; font-size: 40px; }
 @media only screen and (max-width: 1000px) { .counter { text-align: center; } }
 
 .counter__title { display: block; margin-bottom: 35px; }

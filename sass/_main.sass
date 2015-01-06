@@ -133,17 +133,23 @@
   position: absolute
   top: 195px
   // right: percentage(-60/1170)
-  right: -39px
-  width: 565px
-  height: 998px
+  right: 0
+  // width: 565px
+  // height: 998px
+  width: 452px
+  height: 798px
   &:after
     content: ""
     position: absolute
     z-index: 1
-    width: 1453px
-    height: 1193px
-    top: -242px
-    right: -317px
+    // width: 1453px
+    // height: 1193px
+    width: 1162px
+    height: 954px
+    // top: -242px
+    // right: -317px
+    top: -194px
+    right: -254px
     background: url("../img/phone-shadow.png") no-repeat
     pointer-events: none
   +bp
@@ -154,8 +160,12 @@
 
 .phone
   position: relative
-  width: 565px
-  height: 998px
+  // width: 565px
+  // height: 998px
+  // width: 424px
+  // height: 749px
+  width: 452px
+  height: 798px
   z-index: 2
   background: url("../img/phone-bg.png") no-repeat
   +tr(all 0.3s ease)
@@ -163,10 +173,14 @@
 .phone__inner
   position: absolute
   z-index: 2
-  top: 99px
-  left: 87px
-  width: 390px
-  height: 696px
+  // top: 99px
+  // left: 87px
+  // width: 390px
+  // height: 696px
+  top: 79px
+  left: 69px
+  width: 314px
+  height: 558px
   background: black
   overflow: hidden
 
@@ -202,7 +216,7 @@
   background-size: cover
   +bp
     min-height: 0
-    padding: 430px 0 150px
+    padding: 430px 0 110px
 
 .commission
   position: relative
@@ -288,7 +302,7 @@
 
 .text
   width: percentage(695/1170)
-  font-size: 29px
+  font-size: 24px //29
   line-height: 1.15
   > ul, > ul > li, > p
     margin: 29px 0
@@ -302,7 +316,6 @@
     width: 55%
   +bp
     width: auto
-    // font-size: 24px
     > ul > li
       position: relative
       padding-left: 50px
@@ -315,7 +328,7 @@
         +s(checkmark)
 
 .title-head
-  font-size: 60px
+  font-size: 48px //60
   line-height: 1.25
   margin-bottom: 60px
   +bender-i
@@ -327,10 +340,8 @@
 
 .title
   +bender-b-i
-  font-size: 50px
+  font-size: 40px //50
   line-height: 1.1
-  // +bp
-  //   font-size: 40px
 
 
 .figure-text
@@ -363,7 +374,7 @@
   max-width: 510px
   background: #e1275a
   +bender-i
-  font-size: 21px
+  font-size: 20px //21
   line-height: 1.2
   strong, b
     +bender-b-i
@@ -456,10 +467,9 @@
     display: inline-block
     vertical-align: top
     margin-right: 0.089em //4px
+    font-size: 40px
   +bp
     text-align: center
-    // .flip-text
-    //   font-size: 35px
 
 .counter__title
   display: block
