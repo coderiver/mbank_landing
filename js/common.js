@@ -17,17 +17,16 @@ head.ready(function() {
         (function() {
             var phone       = $('.js-phone'),
                 phoneHeight = phone.height() - 75, //because phone image has bottom shadow
-                bottomPoint = $('.js-bottom-point'),
-                pointOne,
-                pointTwo,
-                topPos,
-                bottomPos;
+                maxBottomPos = $('.js-bottom-point'),
+                startPoint,
+                endPoint,
+                topPos;
 
             function calculateTopPos() {
                 topPos    = $(window).height() / 2 - phoneHeight / 2;
-                pointOne  = phone.offset().top + -topPos;
-                if (bottomPoint.length) {
-                    bottomPos = bottomPoint.offset().top - parseInt(bottomPoint.css('margin-top'));
+                startPoint  = phone.offset().top + -topPos;
+                if (maxBottomPos.length) {
+                    endPoint = maxBottomPos.offset().top - parseInt(maxBottomPos.css('margin-top'));
                 }
             }
 
@@ -40,19 +39,20 @@ head.ready(function() {
 
             $(document).on('scroll', function() {
                 if ( $(window).width() >= 1000 ) {
-                    if ( $(window).scrollTop() >= pointOne ) {
-                        phone.css({
-                            position   : 'fixed',
-                            top        : topPos
-                        });
-                        // if ( phone.offset().top >= bottomPos - phoneHeight ) {
-                        //     pointTwo = phone.offset().top;
-                        //     console.log(pointTwo);
-                        //     phone.css({
-                        //         top: pointTwo - $(window).scrollTop()
-                        //     });
-                        // } else {
-                        // }
+                    if ( $(window).scrollTop() >= startPoint ) {
+                        var scrollPos = $(window).scrollTop() + topPos + phoneHeight;
+                        if ( scrollPos >= endPoint ) {
+                            var delta = scrollPos - endPoint;
+                            phone.css({
+                                position   : 'fixed',
+                                top        : topPos - delta.toFixed(0)
+                            });
+                        } else {
+                            phone.css({
+                                position   : 'fixed',
+                                top        : topPos
+                            });
+                        }
                     } else {
                         phone.css({
                             position  : '',
@@ -79,8 +79,8 @@ head.ready(function() {
         }
 
         if ( figureWidth > windowWidth ) {
-            scale = windowWidth / figureWidth;
-            scale = scale.toFixed(3);
+            scale = (windowWidth / figureWidth).toFixed(3);
+            // scale = scale.toFixed(3);
             figure.css({
                 '-webkit-transform': 'scale(' + scale + ')',
                     '-ms-transform': 'scale(' + scale + ')',

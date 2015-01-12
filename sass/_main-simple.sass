@@ -26,7 +26,11 @@
 
 
 .background
-  position: relative
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
   &:before, &:after
     content: ""
     position: absolute
@@ -121,49 +125,56 @@
 .wallet__main
   width: percentage(695/1170)
   padding-top: 60px
-  .phone-container
-    position: absolute
-    top: 0
-    right: -30px
-  .title-head
-    text-align: left
-  .capabilities
-    text-align: left
-    li
-      display: table
-      width: 100%
-      padding: 0
-      min-height: 50px
-      margin-top: 19px
-      margin-top: 0.836em
-      margin-bottom: 0
-  .capabilities__icon
-    display: table-cell
-    vertical-align: middle
-    width: 50px
-    text-align: center
-  .capabilities__text
-    display: table-cell
-    vertical-align: middle
-    padding-left: 25px
+  // .phone-container
+  //   position: absolute
+  //   top: 0
+  //   right: -30px
+  // .capabilities
+  //   text-align: left
+  //   li
+  //     display: table
+  //     width: 100%
+  //     padding: 0
+  //     min-height: 50px
+  //     margin-top: 19px
+  //     margin-top: 0.836em
+  //     margin-bottom: 0
+  // .capabilities__icon
+  //   display: table-cell
+  //   vertical-align: middle
+  //   width: 50px
+  //   text-align: center
+  // .capabilities__text
+  //   display: table-cell
+  //   vertical-align: middle
+  //   padding-left: 25px
+  +bp
+    width: auto
+    padding-top: 0
 
 .title-head
   margin: 0 auto 60px
   font-size: 48px //58px
   line-height: 1.2
-  text-align: center
   color: #C41535
   font-weight: normal
   +bp
     font-size: 50px
+    text-align: center
 
 
 .phone-container
+  position: absolute
+  top: 0
+  right: -30px
   // width: 565px
   // height: 998px
   width: 452px
   height: 798px
-  margin: auto
+  +bp
+    position: relative
+    margin: auto
+    right: 0
 
 .phone
   position: relative
@@ -173,7 +184,7 @@
   height: 798px
   z-index: 2
   background: url("../img/phone-bg.png") no-repeat
-  +tr(all 0.3s ease)
+  // +tr(all 0.15s ease)
 
 .phone__inner
   position: absolute
@@ -191,21 +202,51 @@
 
 .capabilities
   margin: auto
-  text-align: center
+  // li
+  //   display: inline-block
+  //   vertical-align: top
+  //   width: percentage(200/1170)
+  //   min-width: 165px
+  //   padding: 0 5px
+  //   margin-bottom: 15px
   li
-    display: inline-block
-    vertical-align: top
-    width: percentage(200/1170)
-    min-width: 165px
-    padding: 0 5px
-    margin-bottom: 15px
+    display: table
+    width: 100%
+    padding: 0
+    min-height: 50px
+    margin-top: 19px
+    margin-top: 0.836em
+    margin-bottom: 0
+  +bp
+    text-align: center
+    li
+      display: inline-block
+      vertical-align: top
+      width: percentage(200/1170)
+      min-width: 165px
+      padding: 0 5px
+      margin: 0 0 15px 0
 
 .capabilities__icon
   height: 64px
+  display: table-cell
+  vertical-align: middle
+  width: 50px
+  text-align: center
+  +bp
+    display: block
+    width: auto
+    height: 60px
 
 .capabilities__text
+  display: table-cell
+  vertical-align: middle
+  padding-left: 25px
   font-size: 20px
   line-height: 1
+  +bp
+    display: block
+    padding-left: 0
 
 .title
   color: #422655
