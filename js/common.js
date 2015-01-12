@@ -107,29 +107,43 @@ head.ready(function() {
     function createFlipText(selector) {
         var flipText    = $(selector),
             str         = flipText.text(),
-            flipAnimDur = parseInt(flipText.data('duration'));
+            flipAnimDur = parseInt(flipText.data('duration')),
+            animClass   = 'is-animate',
+            input,
+            characters;
 
         flipText.text('');
+        flipAnimDur = flipAnimDur ? flipAnimDur : 400;
+        flipText.parent().append('<input class="js-input-flip-text" type="number" value="' + str + '"/>');
 
-        for (var i = 0; i < str.length; i++) {
-            flipText.append('<div class="char"><span></span>' +
-                               '<div class="char__top"><span></span></div>' +
-                               '<div class="char__bottom"><span></span></div>' +
-                            '</div>');
+        function buildCharacters (string) {
+            for (var i = 0; i < string.length; i++) {
+                flipText.append('<div class="char"><span>0</span>' +
+                                   '<div class="char__top"><span>0</span></div>' +
+                                   '<div class="char__bottom"><span>0</span></div>' +
+                                '</div>');
+            }
         }
 
-        if (flipAnimDur) {
-            flipAnimDur = flipAnimDur;
-        } else {
-            flipAnimDur = 400;
+        function findCharacters() {
+            return flipText.find('.char');
         }
 
-        flipText.find('.char').each(function(index) {
-            var char        = $(this),
-                charText    = char.find('span'),
+        function rebuildCharacters (string) {
+            flipText.html('');
+            buildCharacters(string);
+            characters = findCharacters();
+            characters.each(function(index) {
+                charValue(this, index);
+            });
+        }
+
+        // main function
+        function charValue(selector, index) {
+            var char        = $(selector),
+                charText    = char.find('> span'),
                 charTop     = char.find('.char__top span'),
                 charBotom   = char.find('.char__bottom span'),
-                animClass   = 'is-animate',
                 targetValue = parseInt(str[index]),
                 minValue    = 0;
 
@@ -144,10 +158,10 @@ head.ready(function() {
                         charTop.text(minValue);
                         charBotom.text(minValue);
                         minValue++;
-                        setCharValue();
                         if (!char.hasClass(animClass)) {
                             char.addClass(animClass);
                         }
+                        setCharValue();
                     } else {
                         char.removeClass(animClass);
                     }
@@ -156,10 +170,61 @@ head.ready(function() {
 
             setCharValue();
 
-            setInterval(function(){
-                minValue = 0;
-                setCharValue();
-            }, 15000);
+            // setInterval(function(){
+            //     minValue = 0;
+            //     setCharValue();
+            // }, 15000);
+
+            function changeCharValue() {
+                var currentValue = parseInt(charText.text());
+                var newValue = parseInt(str[index]);
+
+                setTimeout(function() {
+                    if ( newValue !== currentValue ) {
+                        targetValue = currentValue === 9 ? 0 : ++currentValue;
+                        charText.text(targetValue);
+                        charTop.text(targetValue);
+                        charBotom.text(targetValue);
+                        if (!char.hasClass(animClass)) {
+                            char.addClass(animClass);
+                        }
+                        changeCharValue();
+
+                    } else {
+                        char.removeClass(animClass);
+                    }
+
+                }, flipAnimDur);
+            }
+
+            input.on('change', function() {
+                str = $(this).val();
+                if ( str.length !== characters.length ) {
+                    rebuildCharacters(str);
+                }
+                changeCharValue();
+            });
+
+            // setTimeout(function() {
+                // setInterval(function() {
+                //     var inputValue = parseInt(input.val());
+                //     console.log(inputValue);
+                //     inputValue++;
+                //     input.attr('value', inputValue);
+                //     input.trigger('change');
+                // }, 2000);
+            // }, flipAnimDur * 10);
+        }
+
+        buildCharacters(str);
+
+        characters = findCharacters();
+        input = $('.js-input-flip-text');
+        str = input.val();
+
+
+        characters.each(function(index) {
+            charValue(this, index);
         });
     }
 

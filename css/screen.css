@@ -364,7 +364,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .intro { position: relative; z-index: 1; margin-top: -190px; padding: 357px 0 340px; min-height: 484px; background: url("../img/intro-bg.jpg") no-repeat 50% 0; background-size: cover; }
 @media only screen and (max-width: 1000px) { .intro { min-height: 0; padding-top: 240px; } }
 
-.shop { position: relative; z-index: 2; margin: -340px 0 -334px; padding: 370px 0 200px; min-height: 520px; background: url("../img/shop-bg.png") no-repeat 50% 0; background-size: cover; }
+.shop { position: relative; z-index: 2; margin: -340px 0 -334px; padding: 370px 0 200px; min-height: 520px; background: url("../img/shop-bg.png") no-repeat 50% 0; background-size: 100% 100%; }
 @media only screen and (max-width: 1000px) { .shop { min-height: 0; padding: 230px 0 150px; } }
 
 .transfers { padding: 485px 0 167px; min-height: 485px; background: url("../img/transfers-bg.jpg") no-repeat 50% 100%; background-size: cover; }
@@ -448,6 +448,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .counter { *zoom: 1; }
 .counter:after { content: " "; display: table; clear: both; }
 .counter .flip-text { display: inline-block; vertical-align: top; margin-right: 0.089em; font-size: 40px; }
+.counter input, .counter .js-input-flip-text { display: block; width: 0; height: 0; font-size: 0; opacity: 0; visibility: hidden; margin: 0; padding: 0; border: none; box-shadow: none; outline: none; }
 @media only screen and (max-width: 1000px) { .counter { text-align: center; } }
 
 .counter__title { display: block; margin-bottom: 35px; }
@@ -458,3 +459,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .intro .btn { margin-top: 55px; }
 
 .icon-app-store { display: block; margin: 50px auto 0; }
+
+.safari .header { background-size: 100% 100%; }
+@media only screen and (max-width: 1000px) { .safari .header { background-size: cover; } }
+.safari .transfers { margin-bottom: -1px; }

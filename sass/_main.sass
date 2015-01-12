@@ -204,7 +204,7 @@
   padding: 370px 0 200px
   min-height: 520px
   background: url("../img/shop-bg.png") no-repeat 50% 0
-  background-size: cover
+  background-size: 100% 100%
   +bp
     min-height: 0
     padding: 230px 0 150px
@@ -468,6 +468,18 @@
     vertical-align: top
     margin-right: 0.089em //4px
     font-size: 40px
+  input, .js-input-flip-text
+    display: block
+    width: 0
+    height: 0
+    font-size: 0
+    opacity: 0
+    visibility: hidden
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    outline: none
   +bp
     text-align: center
 
@@ -500,3 +512,12 @@
 .icon-app-store
   display: block
   margin: 50px auto 0
+
+
+.safari
+  .header
+    background-size: 100% 100%
+    +bp
+      background-size: cover
+  .transfers
+    margin-bottom: -1px
