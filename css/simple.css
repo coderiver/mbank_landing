@@ -31,39 +31,39 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 
 .icon { display: inline-block; }
 
-.icon-satellite { background: url('../img/icons-simple.png') 0 -1545px no-repeat; width: 47px; height: 48px; }
+.icon-satellite { background: url('../img/icons-simple.png') 0 -1433px no-repeat; width: 47px; height: 48px; }
 
-.icon-money { background: url('../img/icons-simple.png') 0 -1377px no-repeat; width: 38px; height: 35px; }
+.icon-money { background: url('../img/icons-simple.png') 0 -1265px no-repeat; width: 38px; height: 35px; }
 
-.icon-coins { background: url('../img/icons-simple.png') 0 -1021px no-repeat; width: 47px; height: 47px; }
+.icon-coins { background: url('../img/icons-simple.png') 0 -925px no-repeat; width: 47px; height: 47px; }
 
-.icon-shield { background: url('../img/icons-simple.png') 0 -1635px no-repeat; width: 30px; height: 36px; }
+.icon-shield { background: url('../img/icons-simple.png') 0 -1523px no-repeat; width: 30px; height: 36px; }
 
-.icon-phone { background: url('../img/icons-simple.png') 0 -1422px no-repeat; width: 26px; height: 44px; }
+.icon-phone { background: url('../img/icons-simple.png') 0 -1310px no-repeat; width: 26px; height: 44px; }
 
-.icon-best-wallet { background: url('../img/icons-simple.png') 0 -837px no-repeat; width: 50px; height: 60px; }
+.icon-best-wallet { background: url('../img/icons-simple.png') 0 -741px no-repeat; width: 50px; height: 60px; }
 
-.icon-best-wallet { background: url('../img/icons-simple.png') 0 -837px no-repeat; width: 50px; height: 60px; }
+.icon-best-wallet { background: url('../img/icons-simple.png') 0 -741px no-repeat; width: 50px; height: 60px; }
 
-.icon-best { background: url('../img/icons-simple.png') 0 -907px no-repeat; width: 58px; height: 41px; }
+.icon-best { background: url('../img/icons-simple.png') 0 -811px no-repeat; width: 58px; height: 41px; }
 
-.icon-sberbank { background: url('../img/icons-simple.png') 0 -1603px no-repeat; width: 116px; height: 22px; }
+.icon-sberbank { background: url('../img/icons-simple.png') 0 -1491px no-repeat; width: 116px; height: 22px; }
 
-.icon-credit-pilot { background: url('../img/icons-simple.png') 0 -1078px no-repeat; width: 93px; height: 33px; }
+.icon-credit-pilot { background: url('../img/icons-simple.png') 0 -982px no-repeat; width: 93px; height: 33px; }
 
-.icon-webmoney { background: url('../img/icons-simple.png') 0 -1784px no-repeat; width: 102px; height: 25px; }
+.icon-webmoney { background: url('../img/icons-simple.png') 0 -1672px no-repeat; width: 102px; height: 25px; }
 
-.icon-visa-master { background: url('../img/icons-simple.png') 0 -1681px no-repeat; width: 53px; height: 44px; }
+.icon-visa-master { background: url('../img/icons-simple.png') 0 -1569px no-repeat; width: 53px; height: 44px; }
 
-.icon-wallet-one { background: url('../img/icons-simple.png') 0 -1735px no-repeat; width: 45px; height: 39px; }
+.icon-wallet-one { background: url('../img/icons-simple.png') 0 -1623px no-repeat; width: 45px; height: 39px; }
 
-.icon-yandex { background: url('../img/icons-simple.png') 0 -1819px no-repeat; width: 80px; height: 34px; }
+.icon-yandex { background: url('../img/icons-simple.png') 0 -1707px no-repeat; width: 80px; height: 34px; }
 
-.icon-best-footer { background: url('../img/icons-simple.png') 0 -751px no-repeat; width: 106px; height: 76px; }
+.icon-best-footer { background: url('../img/icons-simple.png') 0 -671px no-repeat; width: 84px; height: 60px; }
 
-.icon-ipsp { background: url('../img/icons-simple.png') 0 -1121px no-repeat; width: 166px; height: 76px; }
+.icon-ipsp { background: url('../img/icons-simple.png') 0 -1025px no-repeat; width: 132px; height: 60px; }
 
-.icon-app-store-red { background: url('../img/icons-simple.png') 0 0 no-repeat; width: 362px; height: 196px; }
+.icon-app-store-red { background: url('../img/icons-simple.png') 0 0 no-repeat; width: 289px; height: 156px; }
 
 .line { display: inline-block; }
 
@@ -127,7 +127,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 @media only screen and (max-width: 1000px) { .to-webmoney .line { background: url('../img/lines-mobile.png') -1762px 0 no-repeat; width: 142px; height: 172px; }
   .to-webmoney.is-active .line { background: url('../img/lines-mobile.png') -1610px 0 no-repeat; } }
 
-.reference { position: fixed; z-index: 6; top: 36%; right: 38px; width: 43px; height: 59px; margin-top: -29px; background: url('../img/icons-simple.png') 0 -1476px no-repeat; width: 57px; height: 59px; transition: all 0.2s linear; }
+.reference { position: fixed; z-index: 6; top: 36%; right: 38px; width: 43px; height: 59px; margin-top: -29px; background: url('../img/icons-simple.png') 0 -1364px no-repeat; width: 57px; height: 59px; transition: all 0.2s linear; }
 @media only screen and (max-width: 1000px) { .reference { right: 0; }
   .reference:before { content: ""; position: absolute; bottom: 100%; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 10px 0 0 10px; border-color: transparent transparent transparent #F95923; } }
 
@@ -145,7 +145,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
   .figure .figure__right .el__inner, .figure .figure__right .el__icon, .figure .figure__right .el__text { display: block; }
   .figure .figure__right .el__text { padding: 0; } }
 
-.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -591px no-repeat; width: 299px; height: 299px; }
+.figure__center { position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -150px; background: url('../img/icons.png') 0 -542px no-repeat; width: 299px; height: 299px; }
 
 .figure__left { float: left; }
 .figure__left .el { text-align: right; }
@@ -338,7 +338,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .header__right { padding-top: 70px; float: right; }
 @media only screen and (max-width: 1000px) { .header__right { float: none; padding-top: 0; text-align: center; position: relative; margin-bottom: 25px; } }
 
-.logo { margin: auto; background: url('../img/icons.png') 0 -1356px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
+.logo { margin: auto; background: url('../img/icons.png') 0 -1275px no-repeat; width: 133px; height: 160px; font: 0/0 a; text-shadow: none; color: transparent; }
 
 .menu { display: inline-block; vertical-align: middle; font-size: 21px; line-height: 1.2; color: #fff; font-family: "proxima_nova_light", Helvetica, Arial, sans-serif; font-weight: normal; }
 .menu li { display: inline-block; vertical-align: middle; margin-right: 20px; }
@@ -385,7 +385,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .text.text_left { width: 59.40171%; }
 @media only screen and (max-width: 1000px) { .text.text_left { width: auto; } }
 @media only screen and (max-width: 1000px) { .text > ul > li { position: relative; padding-left: 50px; }
-  .text > ul > li:before { content: ""; position: absolute; top: 50%; left: 0; margin-top: -12px; background: url('../img/icons-simple.png') 0 -958px no-repeat; width: 29px; height: 23px; } }
+  .text > ul > li:before { content: ""; position: absolute; top: 50%; left: 0; margin-top: -12px; background: url('../img/icons-simple.png') 0 -862px no-repeat; width: 29px; height: 23px; } }
 
 .commission { padding-bottom: 90px; }
 .commission .text { text-align: center; padding: 0 8.54701%; }
@@ -394,7 +394,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .figure-text { display: block; margin: 84px 0 -18px; width: 42.73504%; font-size: 21px; line-height: 1.1; position: relative; color: #422655; }
 @media only screen and (max-width: 1000px) { .figure-text { width: auto; text-align: center; padding: 0 20px; } }
 
-.figure__center { margin: -165px 0 0 -150px; background: url('../img/icons-simple.png') 0 -412px no-repeat; width: 300px; height: 329px; }
+.figure__center { margin: -165px 0 0 -150px; background: url('../img/icons-simple.png') 0 -332px no-repeat; width: 300px; height: 329px; }
 
 .tooltip-wrap { position: relative; }
 
@@ -420,7 +420,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .footer { position: relative; padding: 160px 0 105px; text-align: center; background: #fff; }
 @media only screen and (max-width: 1000px) { .footer { padding: 0 0 40px; } }
 
-.footer__logos { margin: 20px 0 57px; }
+.footer__logos { margin: 0 0 45px; }
 .footer__logos .icon { vertical-align: middle; margin-right: 35px; text-decoration: none; }
 .footer__logos .icon:last-child { margin-right: 0; }
 
@@ -435,9 +435,9 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
   .footer__links li { margin-right: 15px; }
   .footer__links li:last-child { margin-right: 0; } }
 
-.app-store { position: relative; display: inline-block; margin: 0 auto 34px; }
+.app-store { position: relative; display: inline-block; margin: 0 auto 28px; }
 .app-store:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("../img/btn-bg.jpg") no-repeat center center; background-color: #CD6364; }
-.app-store:after { content: ""; position: relative; display: block; background: url('../img/icons-simple.png') 0 -206px no-repeat; width: 362px; height: 196px; }
+.app-store:after { content: ""; position: relative; display: block; background: url('../img/icons-simple.png') 0 -166px no-repeat; width: 289px; height: 156px; margin-right: -1px; }
 
 .boxshadow .footer { background: none; overflow: hidden; margin-top: -1px; }
 .boxshadow .footer .l { position: relative; z-index: 2; }
@@ -454,7 +454,7 @@ body b, body strong { font-family: "proxima_nova_bold", Helvetica, Arial, sans-s
 .counter .flip-text { display: inline-block; vertical-align: top; margin-right: 0.089em; font-size: 40px; }
 @media only screen and (max-width: 1000px) { .counter { text-align: center; }
   .counter .flip-text { font-size: 35px; } }
-.counter input, .counter .js-input-flip-text { display: block; width: 0; height: 0; font-size: 0; opacity: 0; visibility: hidden; margin: 0; padding: 0; border: none; box-shadow: none; outline: none; }
+.counter input, .counter .js-input-flip-text { display: block; width: 0; height: 0; font-size: 0; visibility: hidden; margin: 0; padding: 0; border: none; box-shadow: none; outline: none; }
 
 .counter__title { display: block; margin-bottom: 35px; }
 
