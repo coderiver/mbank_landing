@@ -35,6 +35,12 @@ head.ready(function() {
 
             $(window).on('resize', function() {
                 calculateTopPos();
+                if ( $(window).width() < 1000 ) {
+                    phone.css({
+                        position  : '',
+                        top       : ''
+                    });
+                }
             });
 
             $(document).on('scroll', function() {
@@ -80,7 +86,6 @@ head.ready(function() {
 
         if ( figureWidth > windowWidth ) {
             scale = (windowWidth / figureWidth).toFixed(3);
-            // scale = scale.toFixed(3);
             figure.css({
                 '-webkit-transform': 'scale(' + scale + ')',
                     '-ms-transform': 'scale(' + scale + ')',
@@ -104,6 +109,7 @@ head.ready(function() {
     });
 
 
+    // counter functionality
     function createFlipText(selector) {
         var flipText    = $(selector),
             str         = flipText.text(),
@@ -114,7 +120,9 @@ head.ready(function() {
 
         flipText.text('');
         flipAnimDur = flipAnimDur ? flipAnimDur : 400;
+
         flipText.parent().append('<input class="js-input-flip-text" type="number" value="' + str + '"/>');
+        input = $('.js-input-flip-text');
 
         function buildCharacters (string) {
             for (var i = 0; i < string.length; i++) {
@@ -129,17 +137,28 @@ head.ready(function() {
             return flipText.find('.char');
         }
 
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
         function rebuildCharacters (string) {
             flipText.html('');
             buildCharacters(string);
             characters = findCharacters();
             characters.each(function(index) {
-                charValue(this, index);
+                changeCharValue(this, index);
             });
         }
 
-        // main function
-        function charValue(selector, index) {
+        function increaseValue () {
+            var inputValue = parseInt(input.val());
+            inputValue+= getRandomInt(0, 100);
+            input.attr('value', inputValue);
+            input.change();
+        }
+
+        // set character value from 0 to target value with animation
+        function setCharValue(selector, index) {
             var char        = $(selector),
                 charText    = char.find('> span'),
                 charTop     = char.find('.char__top span'),
@@ -147,11 +166,7 @@ head.ready(function() {
                 targetValue = parseInt(str[index]),
                 minValue    = 0;
 
-            // setTimeout(function() {
-            //     char.addClass(animClass);
-            // }, flipAnimDur);
-
-            function setCharValue() {
+            function loop () {
                 setTimeout(function() {
                     if ( targetValue >= minValue ) {
                         charText.text(minValue);
@@ -161,25 +176,29 @@ head.ready(function() {
                         if (!char.hasClass(animClass)) {
                             char.addClass(animClass);
                         }
-                        setCharValue();
+                        loop();
                     } else {
                         char.removeClass(animClass);
                     }
                 }, flipAnimDur);
             }
 
-            setCharValue();
+            loop();
+        }
 
-            // setInterval(function(){
-            //     minValue = 0;
-            //     setCharValue();
-            // }, 15000);
+        // change character value from current to new
+        function changeCharValue(selector, index) {
+            var char        = $(selector),
+                charText    = char.find('> span'),
+                charTop     = char.find('.char__top span'),
+                charBotom   = char.find('.char__bottom span');
 
-            function changeCharValue() {
-                var currentValue = parseInt(charText.text());
-                var newValue = parseInt(str[index]);
+            function loop() {
+                var currentValue = parseInt(charText.text()),
+                    newValue = parseInt(str[index]);
 
                 setTimeout(function() {
+                    // console.log(newValue, currentValue);
                     if ( newValue !== currentValue ) {
                         targetValue = currentValue === 9 ? 0 : ++currentValue;
                         charText.text(targetValue);
@@ -188,8 +207,7 @@ head.ready(function() {
                         if (!char.hasClass(animClass)) {
                             char.addClass(animClass);
                         }
-                        changeCharValue();
-
+                        loop();
                     } else {
                         char.removeClass(animClass);
                     }
@@ -197,35 +215,33 @@ head.ready(function() {
                 }, flipAnimDur);
             }
 
-            input.on('change', function() {
-                str = $(this).val();
-                if ( str.length !== characters.length ) {
-                    rebuildCharacters(str);
-                }
-                changeCharValue();
-            });
+            loop();
 
-            // setTimeout(function() {
-                // setInterval(function() {
-                //     var inputValue = parseInt(input.val());
-                //     console.log(inputValue);
-                //     inputValue++;
-                //     input.attr('value', inputValue);
-                //     input.trigger('change');
-                // }, 2000);
-            // }, flipAnimDur * 10);
+            input.on('change', function() {
+                loop();
+            });
         }
 
         buildCharacters(str);
 
         characters = findCharacters();
-        input = $('.js-input-flip-text');
-        str = input.val();
-
 
         characters.each(function(index) {
-            charValue(this, index);
+            setCharValue(this, index);
+            changeCharValue(this, index);
         });
+
+        input.on('change', function() {
+            str = $(this).val();
+            console.log(str);
+            if ( str.length !== characters.length ) {
+                rebuildCharacters(str);
+            }
+        });
+
+        // setTimeout(function() {
+        //     setInterval(increaseValue, flipAnimDur * 11);
+        // }, flipAnimDur * 10);
     }
 
     if ( $('.js-flip-text').length ) {
