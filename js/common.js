@@ -216,10 +216,6 @@ head.ready(function() {
             }
 
             loop();
-
-            input.on('change', function() {
-                loop();
-            });
         }
 
         buildCharacters(str);
@@ -228,20 +224,22 @@ head.ready(function() {
 
         characters.each(function(index) {
             setCharValue(this, index);
-            changeCharValue(this, index);
         });
 
         input.on('change', function() {
             str = $(this).val();
-            console.log(str);
+            // console.log(str);
             if ( str.length !== characters.length ) {
                 rebuildCharacters(str);
             }
+            characters.each(function(index) {
+                changeCharValue(this, index);
+            });
         });
 
-        // setTimeout(function() {
-        //     setInterval(increaseValue, flipAnimDur * 11);
-        // }, flipAnimDur * 10);
+        setTimeout(function() {
+            setInterval(increaseValue, flipAnimDur * 11);
+        }, flipAnimDur * 10);
     }
 
     if ( $('.js-flip-text').length ) {
